@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gráficos cliente - Chart.js</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 20px; background: #f7f9fc; color:#222 }
+    h1 { font-size: 1.4rem }
+    .grid { display:flex; gap:20px; flex-wrap:wrap }
+    .card { background:#fff; border-radius:8px; padding:16px; box-shadow:0 2px 8px rgba(0,0,0,0.06); flex:1 1 400px }
+    canvas { width:100% !important; height:300px !important }
+    footer { margin-top:18px; font-size:0.9rem; color:#555 }
+  </style>
+</head>
+<body>
+  <h1>Gráficos de ejemplo (cliente)</h1>
+  <p>Archivo autocontenido que muestra un gráfico de líneas y uno de barras usando Chart.js desde CDN.</p>
+  <div class="grid">
+    <div class="card">
+      <h2>Ventas mensuales (Líneas)</h2>
+      <canvas id="lineChart" aria-label="Gráfico de líneas de ventas mensuales"></canvas>
+    </div>
+    <div class="card">
+      <h2>Distribución por producto (Barras)</h2>
+      <canvas id="barChart" aria-label="Gráfico de barras de distribución por producto"></canvas>
+    </div>
+  </div>
+  <footer>Abre este archivo en tu navegador para ver los gráficos.</footer>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Datos de ejemplo
+    const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+    const monthlySales = [1200, 1500, 1700, 1400, 1900, 2200, 2100, 2300, 2000, 2400, 2600, 3000];
+
+    // Gráfico de líneas: Ventas mensuales
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: months,
+        datasets: [{
+          label: 'Ventas ($)',
+          data: monthlySales,
+          borderColor: 'rgba(34, 150, 243, 0.9)',
+          backgroundColor: 'rgba(34, 150, 243, 0.12)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 4,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          tooltip: { mode: 'index', intersect: false }
+        },
+        scales: {
+          y: { beginAtZero: false, ticks: { callback: v => '$' + v } }
+        }
+      }
+    });
+
+    // Gráfico de barras: Distribución por producto
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    const products = ['Producto A','Producto B','Producto C','Producto D'];
+    const productValues = [450, 300, 200, 150];
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: products,
+        datasets: [{
+          label: 'Unidades vendidas',
+          data: productValues,
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.8)',
+            'rgba(255, 159, 64, 0.8)',
+            'rgba(153, 102, 255, 0.8)',
+            'rgba(255, 99, 132, 0.8)'
+          ],
+          borderColor: 'rgba(0,0,0,0.06)'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.parsed.y + ' unidades' } } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    // Ejemplo: actualizar datos desde "servidor" (simulado)
+    // setTimeout(() => { /* fetch('/api/sales').then(...) */ }, 2000);
+  </script>
+</body>
+</html>
