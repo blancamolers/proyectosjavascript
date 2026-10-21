@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dalbit Café</title>
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (archivo local) y mis estilos -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== MENÚ DE NAVEGACIÓN ========== -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-cafe">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">
+        <span class="logo">Dalbit Café</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#info">Información</a></li>
+          <li class="nav-item">
+            <button class="btn btn-rosa ms-lg-2" data-bs-toggle="modal" data-bs-target="#modalReserva">
+              Reservar mesa
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PORTADA ========== -->
+  <header id="inicio" class="portada">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6 text-center text-lg-start">
+          <p class="etiqueta">Bienvenidos</p>
+          <h1 class="titulo-portada">Un rincón dulce<br>al estilo de Seúl</h1>
+          <p class="lead texto-suave my-4">
+            Croffles recién hechos, croissants de matcha, bingsu esponjoso y lattes de fresa
+            en un lugar tranquilo para estudiar, platicar o simplemente descansar.
+          </p>
+          <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+            <a href="#menu" class="btn btn-rosa btn-lg">Ver menú</a>
+            <button class="btn btn-borde btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">
+              Reservar
+            </button>
+          </div>
+        </div>
+
+        <!-- Carrusel de platillos -->
+        <div class="col-12 col-lg-6">
+          <div id="carruselPlatillos" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carruselPlatillos" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#carruselPlatillos" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#carruselPlatillos" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slide slide-rosa">
+                  <img src="img/latte-fresa.svg" class="slide-img" alt="Latte de fresa">
+                  <h3>Latte de Fresa</h3>
+                  <p>Leche fresca con fresas naturales</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="slide slide-verde">
+                  <img src="img/matcha-latte.svg" class="slide-img" alt="Matcha latte">
+                  <h3>Matcha Latte</h3>
+                  <p>Té verde con leche y espuma suave</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="slide slide-crema">
+                  <img src="img/croffle.svg" class="slide-img" alt="Croffle">
+                  <h3>Croffle de Miel</h3>
+                  <p>Croissant en waflera con miel y helado</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselPlatillos" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselPlatillos" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MENÚ ========== -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="titulo-seccion">Nuestro menú</h2>
+        <p class="texto-suave">Todo se prepara al momento, con mucho cariño.</p>
+      </div>
+
+      <!-- Bebidas -->
+      <h3 class="categoria">☕ Bebidas</h3>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mb-5">
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/latte-fresa.svg" class="card-img-top" alt="Latte de fresa">
+            <div class="card-body">
+              <h5 class="card-title">Latte de Fresa</h5>
+              <p class="card-text texto-suave">Leche fría con puré de fresa natural.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,50 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/cafe-dalgona.svg" class="card-img-top" alt="Café dalgona">
+            <div class="card-body">
+              <h5 class="card-title">Café Dalgona</h5>
+              <p class="card-text texto-suave">Espuma de café batido sobre leche.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,00 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/matcha-latte.svg" class="card-img-top" alt="Matcha latte">
+            <div class="card-body">
+              <h5 class="card-title">Matcha Latte</h5>
+              <p class="card-text texto-suave">Té verde japonés con leche de avena.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,50 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/te-yuzu.svg" class="card-img-top" alt="Té de yuzu">
+            <div class="card-body">
+              <h5 class="card-title">Té de Yuzu</h5>
+              <p class="card-text texto-suave">Cítrico coreano caliente o con hielo.</p>
+            </div>
+            <div class="card-footer"><span class="precio">3,50 €</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Postres -->
+      <h3 class="categoria">🍰 Postres</h3>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/croffle.svg" class="card-img-top" alt="Croffle">
+            <div class="card-body">
+              <h5 class="card-title">Croffle</h5>
+              <p class="card-text texto-suave">Con miel, helado de vainilla o Nutella.</p>
+            </div>
+            <div class="card-footer"><span class="precio">5,00 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <span class="badge insignia">Popular</span>
+            <img src="img/bingsu.svg" class="card-img-top" alt="Bingsu">
+            <div class="card-body">
+              <h5 class="card-title">Bingsu</h5>
+              <p class="card-text texto-suave">Fresa, mango o matcha. Para compartir.</p>
+            </div>
+            <div class="card-footer"><span class="precio">8,50 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/mochi-tteok.svg" class="card-img-top" alt="Mochi tteok">
+            <div class="card-body">
+              <h5 class="card-title">Mochi Tteok</h5>
+              <p class="card-text texto-suave">Pastelitos de arroz rellenos de crema.</p>
+            </div>
+            <div class="card-footer"><span class="precio">3,50 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <span class="badge insignia">Nuevo</span>
+            <img src="img/pan-ajo.svg" class="card-img-top" alt="Pan de ajo coreano">
+            <div class="card-body">
+              <h5 class="card-title">Pan de Ajo Coreano</h5>
+              <p class="card-text texto-suave">Relleno de queso crema y mantequilla de ajo.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,50 €</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Croissants de matcha -->
+      <h3 class="categoria mt-5">🥐 Croissants de matcha</h3>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/croissant-matcha.svg" class="card-img-top" alt="Croissant de Matcha">
+            <div class="card-body">
+              <h5 class="card-title">Croissant de Matcha</h5>
+              <p class="card-text texto-suave">Glaseado de té verde con un toque de matcha en polvo.</p>
+            </div>
+            <div class="card-footer"><span class="precio">3,80 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <span class="badge insignia">Popular</span>
+            <img src="img/croissant-crema-matcha.svg" class="card-img-top" alt="Croissant Relleno de Matcha">
+            <div class="card-body">
+              <h5 class="card-title">Croissant Relleno de Matcha</h5>
+              <p class="card-text texto-suave">Abierto y relleno de crema suave de matcha.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,50 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <span class="badge insignia">Nuevo</span>
+            <img src="img/croissant-matcha-fresa.svg" class="card-img-top" alt="Croissant Matcha y Fresa">
+            <div class="card-body">
+              <h5 class="card-title">Croissant Matcha y Fresa</h5>
+              <p class="card-text texto-suave">Glaseado de matcha con fresas frescas encima.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,80 €</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card tarjeta h-100">
+            <img src="img/croissant-bicolor.svg" class="card-img-top" alt="Croissant Bicolor">
+            <div class="card-body">
+              <h5 class="card-title">Croissant Bicolor</h5>
+              <p class="card-text texto-suave">Hojaldre de mantequilla y matcha en capas.</p>
+            </div>
+            <div class="card-footer"><span class="precio">4,20 €</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HORARIOS Y PREGUNTAS ========== -->
+  <section id="info" class="py-5 seccion-clara">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="titulo-seccion">Información</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="accordion" id="acordeonInfo">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#info1">
+                  🕒 ¿Cuál es el horario?
+                </button>
+              </h2>
+              <div id="info1" class="accordion-collapse collapse show" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">
+                  <ul class="list-unstyled mb-0">
+                    <li><strong>Lunes a viernes:</strong> 9:00 – 21:00</li>
+                    <li><strong>Sábado:</strong> 10:00 – 22:00</li>
+                    <li><strong>Domingo:</strong> 10:00 – 20:00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info2">
+                  📍 ¿Dónde están ubicados?
+                </button>
+              </h2>
+              <div id="info2" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">
+                  Calle de las Flores 24, a dos cuadras del parque central.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info3">
+                  📶 ¿Tienen wifi y enchufes?
+                </button>
+              </h2>
+              <div id="info3" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">
+                  ¡Sí! Wifi gratis y enchufes en casi todas las mesas. Ideal para estudiar.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info4">
+                  🌱 ¿Tienen opciones veganas?
+                </button>
+              </h2>
+              <div id="info4" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
+                <div class="accordion-body">
+                  Todas las bebidas se pueden pedir con leche de avena o almendra sin costo extra.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="pie text-center py-4">
+    <p class="logo mb-1">Dalbit Café</p>
+    <p class="mb-0 small">2026</p>
+  </footer>
+
+  <!-- ========== MODAL: RESERVAR MESA ========== -->
+  <div class="modal fade" id="modalReserva" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Reservar mesa 🌸</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <form id="formReserva">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" required>
+              </div>
+              <div class="col-6">
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="hora" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="personas" class="form-label">Personas</label>
+              <select class="form-select" id="personas">
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 o más</option>
+              </select>
+            </div>
+
+            <!-- Mensaje de confirmación (oculto al inicio) -->
+            <div id="mensajeOk" class="alert alert-success d-none mb-0">
+              ¡Listo! Tu mesa quedó reservada. ¡Gracias! 💗
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-rosa">Confirmar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript de Bootstrap (archivo local) y el mío -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

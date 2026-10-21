@@ -1,0 +1,239 @@
+/* ===== COLORES DE LA CAFETERÍA ===== */
+:root {
+  --crema: #fdf8f3;
+  --crema-oscuro: #f5ebe0;
+  --rosa: #f4a7b9;
+  --rosa-oscuro: #e58ba1;
+  --rosa-claro: #fde4ea;
+  --verde-claro: #e3f0e1;
+  --lila-claro: #ece6f7;
+  --amarillo-claro: #fbf0d9;
+  --cafe: #6b4f3f;
+  --cafe-suave: #9c8577;
+}
+
+/* ===== GENERAL ===== */
+body {
+  background-color: var(--crema);
+  color: var(--cafe);
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+h1, h2, h3, h4, h5, .logo {
+  font-family: "Jua", sans-serif;
+  font-weight: normal;
+}
+
+.texto-suave {
+  color: var(--cafe-suave);
+}
+
+/* Texto pequeño en rosa arriba de los títulos */
+.etiqueta {
+  color: var(--rosa-oscuro);
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+}
+
+/* ===== BOTONES ===== */
+.btn-rosa {
+  background-color: var(--rosa);
+  color: white;
+  border-radius: 50px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.btn-rosa:hover {
+  background-color: var(--rosa-oscuro);
+  color: white;
+}
+
+.btn-borde {
+  border: 2px solid var(--rosa);
+  color: var(--rosa-oscuro);
+  border-radius: 50px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.btn-borde:hover {
+  background-color: var(--rosa-claro);
+  color: var(--rosa-oscuro);
+}
+
+/* ===== NAVBAR ===== */
+.navbar-cafe {
+  background-color: rgba(253, 248, 243, 0.92);
+  border-bottom: 1px solid var(--crema-oscuro);
+}
+
+.navbar-cafe .logo {
+  font-size: 1.6rem;
+  color: var(--cafe);
+}
+
+.navbar-cafe .nav-link {
+  color: var(--cafe);
+}
+
+.navbar-cafe .nav-link:hover {
+  color: var(--rosa-oscuro);
+}
+
+/* ===== PORTADA ===== */
+.portada {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, var(--rosa-claro), var(--crema));
+}
+
+.titulo-portada {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+/* ===== CARRUSEL ===== */
+.carousel-inner {
+  border-radius: 30px;
+}
+
+.slide {
+  height: 420px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.slide-img {
+  width: 260px;
+  max-width: 80%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.slide p {
+  color: var(--cafe-suave);
+}
+
+.slide-rosa  { background-color: #fbd3dc; }
+.slide-verde { background-color: #d4e8d0; }
+.slide-crema { background-color: #f6e3c6; }
+
+/* Flechas e indicadores en color café */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(35%) sepia(20%) saturate(500%) hue-rotate(340deg);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--cafe);
+}
+
+/* ===== MENÚ ===== */
+.categoria {
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta {
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(107, 79, 63, 0.08);
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+}
+
+
+.tarjeta .card-footer {
+  background: none;
+  border: none;
+  padding-top: 0;
+}
+
+.precio {
+  font-family: "Jua", sans-serif;
+  font-size: 1.3rem;
+  color: var(--rosa-oscuro);
+}
+
+/* Etiqueta "Popular" / "Nuevo" */
+.insignia {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--cafe);
+  border-radius: 50px;
+}
+
+/* ===== INFORMACIÓN (ACORDEÓN) ===== */
+.seccion-clara {
+  background-color: var(--crema-oscuro);
+}
+
+.accordion-item {
+  border: none;
+  border-radius: 16px !important;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+
+.accordion-button {
+  color: var(--cafe);
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--rosa-claro);
+  color: var(--cafe);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* ===== MODAL ===== */
+.modal-content {
+  border: none;
+  border-radius: 24px;
+  background-color: var(--crema);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--rosa);
+  box-shadow: 0 0 0 0.2rem var(--rosa-claro);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.pie {
+  background-color: var(--cafe);
+  color: var(--crema);
+}
+
+.pie .logo {
+  font-size: 1.4rem;
+}
+
+
+/* ===== CELULAR ===== */
+@media (max-width: 576px) {
+  .titulo-portada {
+    font-size: 2.3rem;
+  }
+
+  .slide {
+    height: 340px;
+  }
+}

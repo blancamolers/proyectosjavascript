@@ -1,0 +1,313 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" width="600" height="440"
+     xmlns:c2pa="http://c2pa.org/manifest">
+    <metadata>
+        <c2pa:manifest>
+            AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo5ODZjMWRmYi1hMWEyLTQ3OTMtOWJkNS1hZTkzY2M0ODllNTMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJno7EEETz9yejxUMXFXqSYAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpkZjk4YzQzNi00NjA5LTRhOTQtOTkwNy1jYjZhNTM4OGUyNTJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoVIiRd1iqhTAUvCQOS3etJAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggwGdTP5OeRCkCWg31inEVBZOioIlZ3PsnP7coawa/8nekZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaI/8eUah8y0/9U1UhgQk4o4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCA2sMtEb6WXMaF7UTF6QAPLqQYOGDvt3ayvfJTbBy79xmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjk4NmMxZGZiLWExYTItNDc5My05YmQ1LWFlOTNjYzQ4OWU1My9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjRlMjI5NmEzLWU5MTAtNGY2NS05NjU2LWFlYWUzYTNhM2E2YnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDAZ1M/k55EKQJaDfWKcRUFk6KgiVnc+yc/tyhrBr/yd6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggQW8UWmdJZfkTJSvRuVctzwXzf/XXfoQb9Zojv/Qv6LyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggoJumQfinhONvmS4zmgkABlKqOfiikSlSnqt2WpKSUJV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCnTrpTOunTaxxtrVhWpg5JiV4LwN9PzEMnfdKc6tcza9fVN1OWsSr27iLuzRnjwnyTU8T/Ab8slysLbpQvKtrU=
+        </c2pa:manifest>
+    </metadata>
+    <defs>
+        <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4"/>
+        </filter>
+        <filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.6"/>
+        </filter>
+        <filter id="blur8" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8"/>
+        </filter>
+        <filter id="drop" x="-30%" y="-30%" width="160%" height="170%">
+            <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#4a2c20" flood-opacity="0.22"/>
+        </filter>
+        <filter id="grain" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+            <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 0.5 0"/>
+        </filter>
+        <filter id="porous" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.22" numOctaves="3" seed="4" result="n"/>
+            <feColorMatrix in="n" values="0 0 0 0 0.35  0 0 0 0 0.18  0 0 0 0 0.05  0 0 0 -1.6 1.05" result="spots"/>
+            <feComposite in="spots" in2="SourceGraphic" operator="in" result="tex"/>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="tex"/>
+            </feMerge>
+        </filter>
+        <filter id="porous2" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="6" result="n"/>
+            <feColorMatrix in="n" values="0 0 0 0 0.45  0 0 0 0 0.24  0 0 0 0 0.08  0 0 0 -1.4 0.82" result="spots"/>
+            <feComposite in="spots" in2="SourceGraphic" operator="in" result="tex"/>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="tex"/>
+            </feMerge>
+        </filter>
+        <filter id="fine" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="9" result="n"/>
+            <feColorMatrix in="n" values="0 0 0 0 0.6  0 0 0 0 0.75  0 0 0 0 0.9  0 0 0 -2 1.25" result="spots"/>
+            <feComposite in="spots" in2="SourceGraphic" operator="in" result="tex"/>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="tex"/>
+            </feMerge>
+        </filter>
+        <filter id="wood" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01 0.35" numOctaves="2" seed="3" result="n"/>
+            <feColorMatrix in="n" values="0 0 0 0 0.45  0 0 0 0 0.27  0 0 0 0 0.14  0 0 0 0.9 -0.3" result="g"/>
+            <feComposite in="g" in2="SourceGraphic" operator="in" result="tex"/>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="tex"/>
+            </feMerge>
+        </filter>
+
+        <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff4e2"/>
+            <stop offset="1" stop-color="#f2d9b3"/>
+        </linearGradient>
+        <linearGradient id="table" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#efd2aa"/>
+            <stop offset="1" stop-color="#d4ae7c"/>
+        </linearGradient>
+        <radialGradient id="vign" cx="50%" cy="50%" r="70%">
+            <stop offset="0.6" stop-color="#000" stop-opacity="0"/>
+            <stop offset="1" stop-color="#3a2218" stop-opacity="0.18"/>
+        </radialGradient>
+        <radialGradient id="light" cx="30%" cy="10%" r="60%">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.55"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="crc">
+            <path d="M70 150 Q62 116 96 104 Q150 88 204 104 Q238 116 230 150 Q226 178 196 182 Q150 190 104 182 Q74 178 70 150Z"/>
+        </clipPath>
+        <linearGradient id="plateg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#f1e8dd"/>
+        </linearGradient>
+        <radialGradient id="bwhole" cx="35%" cy="30%" r="80%">
+            <stop offset="0" stop-color="#ff7488"/>
+            <stop offset="0.6" stop-color="#e2304f"/>
+            <stop offset="1" stop-color="#a5172f"/>
+        </radialGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#8ccf6e"/>
+            <stop offset="1" stop-color="#4c9a3c"/>
+        </linearGradient>
+        <linearGradient id="waffle" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f1b866"/>
+            <stop offset="0.6" stop-color="#d48c3c"/>
+            <stop offset="1" stop-color="#a9621f"/>
+        </linearGradient>
+        <linearGradient id="cell" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffdca0"/>
+            <stop offset="1" stop-color="#df9c4c"/>
+        </linearGradient>
+        <linearGradient id="honey" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffe066"/>
+            <stop offset="1" stop-color="#f29a0e"/>
+        </linearGradient>
+        <radialGradient id="vanilla" cx="40%" cy="30%" r="80%">
+            <stop offset="0" stop-color="#fffef9"/>
+            <stop offset="0.7" stop-color="#fbf0d8"/>
+            <stop offset="1" stop-color="#ead5ab"/>
+        </radialGradient>
+    </defs>
+    <rect width="300" height="220" fill="url(#wall)"/>
+    <circle cx="212" cy="66" r="20" fill="#ffffff" opacity="0.36" filter="url(#blur2)"/>
+    <circle cx="179" cy="24" r="15" fill="#ffffff" opacity="0.28" filter="url(#blur2)"/>
+    <circle cx="67" cy="16" r="13" fill="#ffffff" opacity="0.21" filter="url(#blur2)"/>
+    <circle cx="134" cy="90" r="12" fill="#ffffff" opacity="0.24" filter="url(#blur2)"/>
+    <circle cx="173" cy="60" r="17" fill="#ffffff" opacity="0.30" filter="url(#blur2)"/>
+    <circle cx="289" cy="124" r="16" fill="#ffffff" opacity="0.23" filter="url(#blur2)"/>
+    <circle cx="42" cy="117" r="17" fill="#ffffff" opacity="0.32" filter="url(#blur2)"/>
+    <circle cx="111" cy="43" r="16" fill="#ffffff" opacity="0.30" filter="url(#blur2)"/>
+    <circle cx="176" cy="86" r="17" fill="#ffffff" opacity="0.22" filter="url(#blur2)"/>
+    <rect y="164" width="300" height="56" fill="url(#table)"/>
+    <rect y="164" width="300" height="2" fill="#fff" opacity="0.5"/>
+
+    <ellipse cx="150" cy="196" rx="104" ry="9" fill="#3e2318" opacity="0.28" filter="url(#blur)"/>
+    <ellipse cx="150" cy="195" rx="72.8" ry="4.05" fill="#2e180f" opacity="0.25200000000000006" filter="url(#blur2)"/>
+    <ellipse cx="150" cy="188" rx="110" ry="17" fill="#efe5d8" stroke="#7d5545" stroke-width="1.8"
+             stroke-opacity="0.7"/>
+    <ellipse cx="150" cy="186" rx="110" ry="17" fill="url(#plateg)" stroke="#7d5545" stroke-width="1.8"
+             stroke-opacity="0.7"/>
+    <ellipse cx="150" cy="187" rx="77.0" ry="10.2" fill="#efe5d8" opacity="0.7"/>
+    <path d="M56.5 181.75 Q106.0 169.85 161.0 170.7" stroke="#fff" stroke-width="2.2" fill="none" opacity="0.9"
+          stroke-linecap="round"/>
+    <ellipse cx="150" cy="182" rx="80" ry="6" fill="#3e2318" opacity="0.3" filter="url(#blur)"/>
+    <ellipse cx="150" cy="181" rx="56.0" ry="2.7" fill="#2e180f" opacity="0.27" filter="url(#blur2)"/>
+    <g filter="url(#drop)">
+        <path d="M70 150 Q62 116 96 104 Q150 88 204 104 Q238 116 230 150 Q226 178 196 182 Q150 190 104 182 Q74 178 70 150Z"
+              fill="url(#waffle)" stroke="#8c4f1c" stroke-width="1.5" stroke-linejoin="round"/>
+    </g>
+    <g clip-path="url(#crc)">
+        <rect x="60" y="90" width="180" height="100" fill="url(#waffle)" filter="url(#porous2)"/>
+        <rect x="82" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="84" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="82" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="103" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="105" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="103" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="124" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="126" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="124" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="145" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="147" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="145" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="166" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="168" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="166" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="187" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="189" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="187" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="208" y="104" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="210" y="105.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="208" y="115" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="82" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="84" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="82" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="103" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="105" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="103" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="124" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="126" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="124" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="145" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="147" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="145" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="166" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="168" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="166" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="187" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="189" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="187" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="208" y="124" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="210" y="125.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="208" y="135" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="82" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="84" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="82" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="103" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="105" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="103" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="124" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="126" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="124" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="145" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="147" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="145" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="166" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="168" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="166" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="187" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="189" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="187" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="208" y="144" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="210" y="145.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="208" y="155" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="82" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="84" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="82" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="103" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="105" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="103" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="124" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="126" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="124" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="145" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="147" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="145" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="166" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="168" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="166" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="187" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="189" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="187" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <rect x="208" y="164" width="15" height="14" rx="3.5" fill="url(#cell)"/>
+        <rect x="210" y="165.5" width="11" height="3" rx="1.5" fill="#fff" opacity="0.35"/>
+        <rect x="208" y="175" width="15" height="3" rx="1.5" fill="#8a4a16" opacity="0.25"/>
+        <path d="M70 120 Q150 96 230 120" stroke="#8a4a16" stroke-width="6" fill="none" opacity="0.25"
+              filter="url(#blur2)"/>
+        <rect x="60" y="150" width="180" height="40" fill="#6d3810" opacity="0.18" filter="url(#blur)"/>
+    </g>
+    <path d="M70 150 Q62 116 96 104 Q150 88 204 104 Q238 116 230 150 Q226 178 196 182 Q150 190 104 182 Q74 178 70 150Z"
+          fill="none" stroke="#8c4f1c" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="126" cy="141" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="140" cy="150" r="0.6" fill="#fff" opacity="0.9"/>
+    <circle cx="177" cy="167" r="0.7" fill="#fff" opacity="0.9"/>
+    <circle cx="144" cy="160" r="0.9" fill="#fff" opacity="0.9"/>
+    <circle cx="109" cy="120" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="84" cy="171" r="1.2" fill="#fff" opacity="0.9"/>
+    <circle cx="178" cy="168" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="137" cy="150" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="216" cy="164" r="0.8" fill="#fff" opacity="0.9"/>
+    <circle cx="206" cy="160" r="1.1" fill="#fff" opacity="0.9"/>
+    <circle cx="193" cy="136" r="1.2" fill="#fff" opacity="0.9"/>
+    <circle cx="202" cy="157" r="1.1" fill="#fff" opacity="0.9"/>
+    <circle cx="186" cy="136" r="1.1" fill="#fff" opacity="0.9"/>
+    <circle cx="92" cy="132" r="0.9" fill="#fff" opacity="0.9"/>
+    <circle cx="83" cy="133" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="167" cy="124" r="1.3" fill="#fff" opacity="0.9"/>
+    <circle cx="173" cy="132" r="1.1" fill="#fff" opacity="0.9"/>
+    <circle cx="159" cy="145" r="0.9" fill="#fff" opacity="0.9"/>
+    <circle cx="218" cy="153" r="1.1" fill="#fff" opacity="0.9"/>
+    <circle cx="186" cy="177" r="0.6" fill="#fff" opacity="0.9"/>
+    <circle cx="166" cy="160" r="0.8" fill="#fff" opacity="0.9"/>
+    <circle cx="137" cy="112" r="0.7" fill="#fff" opacity="0.9"/>
+    <circle cx="133" cy="115" r="0.8" fill="#fff" opacity="0.9"/>
+    <circle cx="205" cy="147" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="214" cy="148" r="1.3" fill="#fff" opacity="0.9"/>
+    <circle cx="169" cy="165" r="0.7" fill="#fff" opacity="0.9"/>
+    <circle cx="163" cy="161" r="0.6" fill="#fff" opacity="0.9"/>
+    <circle cx="209" cy="119" r="0.9" fill="#fff" opacity="0.9"/>
+    <circle cx="105" cy="143" r="1.0" fill="#fff" opacity="0.9"/>
+    <circle cx="90" cy="174" r="0.9" fill="#fff" opacity="0.9"/>
+    <path d="M92 108 Q98 138 90 152 Q86 162 95 162 Q104 160 104 142 Q106 124 120 106 M176 104 Q186 128 182 142 Q180 154 189 152 Q196 148 194 128 Q192 112 202 106 M138 104 Q140 120 136 128 Q134 134 140 134 Q146 132 146 118 L148 104"
+          fill="url(#honey)" stroke="#c9860f" stroke-width="1" opacity="0.92"/>
+    <path d="M96 116 Q99 136 94 148 M180 112 Q186 128 184 140" stroke="#fff" stroke-width="1.8" fill="none"
+          opacity="0.8" stroke-linecap="round"/>
+    <ellipse cx="150" cy="106" rx="36" ry="5" fill="#3e2318" opacity="0.35" filter="url(#blur)"/>
+    <ellipse cx="150" cy="105" rx="25.2" ry="2.25" fill="#2e180f" opacity="0.315" filter="url(#blur2)"/>
+    <path d="M112 104 Q106 64 150 58 Q194 64 188 104 Q180 113 171 104 Q162 118 152 104 Q142 115 133 104 Q122 116 112 104Z"
+          fill="url(#vanilla)" stroke="#bfa27a" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M112 104 Q106 64 150 58 Q194 64 188 104 Q180 113 171 104 Q162 118 152 104 Q142 115 133 104 Q122 116 112 104Z"
+          fill="#fff" opacity="0.001" filter="url(#fine)"/>
+    <path d="M122 104 q2 10 -2 16 q-2 4 2 4 q5 -1 4 -12" fill="url(#vanilla)" stroke="#bfa27a" stroke-width="1"/>
+    <g fill="#3a2418" opacity="0.65">
+        <ellipse cx="153" cy="87" rx="1" ry="0.6"/>
+        <ellipse cx="143" cy="77" rx="1" ry="0.6"/>
+        <ellipse cx="161" cy="86" rx="1" ry="0.6"/>
+        <ellipse cx="138" cy="91" rx="1" ry="0.6"/>
+        <ellipse cx="138" cy="68" rx="1" ry="0.6"/>
+        <ellipse cx="135" cy="69" rx="1" ry="0.6"/>
+        <ellipse cx="130" cy="92" rx="1" ry="0.6"/>
+        <ellipse cx="144" cy="97" rx="1" ry="0.6"/>
+        <ellipse cx="166" cy="70" rx="1" ry="0.6"/>
+        <ellipse cx="181" cy="98" rx="1" ry="0.6"/>
+        <ellipse cx="125" cy="97" rx="1" ry="0.6"/>
+        <ellipse cx="147" cy="83" rx="1" ry="0.6"/>
+        <ellipse cx="180" cy="76" rx="1" ry="0.6"/>
+        <ellipse cx="152" cy="98" rx="1" ry="0.6"/>
+    </g>
+    <ellipse cx="134" cy="70" rx="10" ry="5" fill="#fff" opacity="0.85" transform="rotate(-25 134 70)"
+             filter="url(#blur2)"/>
+    <g>
+        <ellipse cx="135.17999999999998" cy="90.68" rx="4.68" ry="2.652" fill="#ff7f9b" opacity="0.5"
+                 filter="url(#blur2)"/>
+        <ellipse cx="164.82000000000002" cy="90.68" rx="4.68" ry="2.652" fill="#ff7f9b" opacity="0.5"
+                 filter="url(#blur2)"/>
+        <ellipse cx="141.42" cy="86" rx="2.652" ry="3.2760000000000002" fill="#3a251d"/>
+        <ellipse cx="158.58" cy="86" rx="2.652" ry="3.2760000000000002" fill="#3a251d"/>
+        <circle cx="140.56199999999998" cy="84.752" r="1.0919999999999999" fill="#fff"/>
+        <circle cx="157.722" cy="84.752" r="1.0919999999999999" fill="#fff"/>
+        <circle cx="142.434" cy="87.248" r="0.46799999999999997" fill="#fff"/>
+        <circle cx="159.59400000000002" cy="87.248" r="0.46799999999999997" fill="#fff"/>
+        <path d="M146.49 89.51 q1.7550000000000001 2.34 3.5100000000000002 0 q1.7550000000000001 2.34 3.5100000000000002 0"
+              fill="none" stroke="#3a251d" stroke-width="1.17" stroke-linecap="round"/>
+    </g>
+    <path d="M178 58 q11 -15 24 -10 q-7 15 -24 10Z" fill="url(#leafg)" stroke="#3f7a32" stroke-width="1.2"/>
+    <path d="M178 58 q-2 -17 11 -25 q4 15 -11 25Z" fill="url(#leafg)" stroke="#3f7a32" stroke-width="1.2"/>
+    <path d="M180 57 l16 -7 M179 56 l7 -18" stroke="#3f7a32" stroke-width="0.9"/>
+
+    <rect width="300" height="220" fill="url(#light)"/>
+    <rect width="300" height="220" fill="url(#vign)"/>
+    <rect width="300" height="220" filter="url(#grain)" opacity="0.22"/>
+</svg>
