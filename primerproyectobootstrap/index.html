@@ -14,43 +14,13 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-pagina="inicio">
 
-  <!-- ========== MENÚ DE NAVEGACIÓN ========== -->
-  <nav class="navbar navbar-expand-lg sticky-top navbar-cafe">
-    <div class="container">
-      <a class="navbar-brand" href="#inicio">
-        <span class="logo">Dalbit Café</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
-          <li class="nav-item"><a class="nav-link" href="#info">Información</a></li>
-          <li class="nav-item">
-            <button class="btn btn-rosa ms-lg-2" data-bs-toggle="modal" data-bs-target="#modalReserva">
-              Reservar mesa
-            </button>
-          </li>
-          <li class="nav-item">
-            <!-- Botón del carrito: abre el panel lateral -->
-            <button class="btn btn-borde position-relative ms-lg-1 mt-2 mt-lg-0" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
-              🛒 Mi pedido
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill contador numero-carrito">0</span>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Aquí plantilla.js pone el menú de arriba -->
+  <div id="cabecera"></div>
 
   <!-- ========== PORTADA ========== -->
-  <header id="inicio" class="portada">
+  <header class="portada">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-12 col-lg-6 text-center text-lg-start">
@@ -61,7 +31,7 @@
             en un lugar tranquilo para estudiar, platicar o simplemente descansar.
           </p>
           <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-            <a href="#menu" class="btn btn-rosa btn-lg">Ver menú</a>
+            <a href="menu.html" class="btn btn-rosa btn-lg">Ver menú</a>
             <button class="btn btn-borde btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">
               Reservar
             </button>
@@ -113,330 +83,43 @@
     </div>
   </header>
 
-  <!-- ========== MENÚ ========== -->
-  <section id="menu" class="py-5">
+  <!-- ========== ¿QUÉ QUIERES HACER? ========== -->
+  <section class="py-5">
     <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="titulo-seccion">Nuestro menú</h2>
-        <p class="texto-suave">Todo se prepara al momento, con mucho cariño.</p>
-      </div>
+      <h2 class="titulo-seccion text-center mb-5">¿Qué te apetece hoy?</h2>
 
-      <!-- Buscador y botones de filtro -->
-      <div class="row justify-content-center mb-4">
-        <div class="col-12 col-md-6">
-          <input type="search" id="buscador" class="form-control buscador" placeholder="🔍 Buscar en el menú...">
+      <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+        <div class="col aparecer">
+          <a href="menu.html" class="caja acceso">
+            <div class="icono-grande">🍰</div>
+            <h4>Ver el menú</h4>
+            <p class="texto-suave mb-0">Bebidas, postres y croissants recién hechos.</p>
+          </a>
         </div>
-      </div>
-      <div class="text-center mb-5">
-        <button class="btn btn-borde btn-filtro activo" data-filtro="todos">Todos</button>
-        <button class="btn btn-borde btn-filtro" data-filtro="bebidas">☕ Bebidas</button>
-        <button class="btn btn-borde btn-filtro" data-filtro="postres">🍰 Postres</button>
-        <button class="btn btn-borde btn-filtro" data-filtro="croissants">🥐 Croissants</button>
-      </div>
-
-      <!-- Mensaje si la búsqueda no encuentra nada -->
-      <p id="sinResultados" class="text-center texto-suave d-none">No encontramos nada con ese nombre 🥲</p>
-
-      <!-- Las tarjetas las crea JavaScript con la lista "productos" de js/main.js -->
-      <div class="grupo" data-categoria="bebidas">
-        <h3 class="categoria">☕ Bebidas</h3>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
-      </div>
-
-      <div class="grupo" data-categoria="postres">
-        <h3 class="categoria">🍰 Postres</h3>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
-      </div>
-
-      <div class="grupo" data-categoria="croissants">
-        <h3 class="categoria">🥐 Croissants</h3>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== HORARIOS Y PREGUNTAS ========== -->
-  <section id="info" class="py-5 seccion-clara">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="titulo-seccion">Información</h2>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-          <div class="accordion" id="acordeonInfo">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#info1">
-                  🕒 ¿Cuál es el horario?
-                </button>
-              </h2>
-              <div id="info1" class="accordion-collapse collapse show" data-bs-parent="#acordeonInfo">
-                <div class="accordion-body">
-                  <ul class="list-unstyled mb-0">
-                    <li><strong>Lunes a viernes:</strong> 9:00 – 21:00</li>
-                    <li><strong>Sábado:</strong> 10:00 – 22:00</li>
-                    <li><strong>Domingo:</strong> 10:00 – 20:00</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info2">
-                  📍 ¿Dónde están ubicados?
-                </button>
-              </h2>
-              <div id="info2" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
-                <div class="accordion-body">
-                  Calle de las Flores 24, a dos cuadras del parque central.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info3">
-                  📶 ¿Tienen wifi y enchufes?
-                </button>
-              </h2>
-              <div id="info3" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
-                <div class="accordion-body">
-                  ¡Sí! Wifi gratis y enchufes en casi todas las mesas. Ideal para estudiar.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info4">
-                  🌱 ¿Tienen opciones veganas?
-                </button>
-              </h2>
-              <div id="info4" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
-                <div class="accordion-body">
-                  Todas las bebidas se pueden pedir con leche de avena o almendra sin costo extra.
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <div class="col aparecer">
+          <a href="pedido.html" class="caja acceso">
+            <div class="icono-grande">🛵</div>
+            <h4>Hacer un pedido</h4>
+            <p class="texto-suave mb-0">Para recoger o a domicilio. Gratis desde 20 €.</p>
+          </a>
+        </div>
+        <div class="col aparecer">
+          <a href="informacion.html" class="caja acceso">
+            <div class="icono-grande">🕒</div>
+            <h4>Horarios</h4>
+            <p class="texto-suave mb-0">Dónde estamos, horario y preguntas frecuentes.</p>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PIE DE PÁGINA ========== -->
-  <footer class="pie text-center py-4">
-    <p class="logo mb-1">Dalbit Café</p>
-    <p class="mb-0 small">2026</p>
-  </footer>
+  <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
+  <div id="piezasComunes"></div>
 
-  <!-- ========== MODAL: RESERVAR MESA ========== -->
-  <div class="modal fade" id="modalReserva" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Reservar mesa 🌸</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <form id="formReserva">
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-6">
-                <label for="fecha" class="form-label">Fecha</label>
-                <input type="date" class="form-control" id="fecha" required>
-              </div>
-              <div class="col-6">
-                <label for="hora" class="form-label">Hora</label>
-                <input type="time" class="form-control" id="hora" required>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="personas" class="form-label">Personas</label>
-              <select class="form-select" id="personas">
-                <option>1</option>
-                <option selected>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5 o más</option>
-              </select>
-            </div>
-
-            <!-- Mensaje de confirmación (oculto al inicio) -->
-            <div id="mensajeOk" class="alert alert-success d-none mb-0">
-              ¡Listo! Tu mesa quedó reservada. ¡Gracias! 💗
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-rosa">Confirmar</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== PANEL LATERAL: CARRITO ========== -->
-  <div class="offcanvas offcanvas-end panel-carrito" tabindex="-1" id="panelCarrito">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">🛒 Mi pedido</h5>
-      <button id="btnVaciar" class="btn btn-sm btn-borde ms-auto me-2">🗑️ Vaciar</button>
-      <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas"></button>
-    </div>
-
-    <div class="offcanvas-body d-flex flex-column">
-      <!-- Aquí JavaScript pinta los productos -->
-      <ul id="listaCarrito" class="list-unstyled flex-grow-1"></ul>
-
-      <!-- Mensaje cuando no hay nada -->
-      <p id="carritoVacio" class="text-center texto-suave my-auto">
-        Tu pedido está vacío 🥺<br>Agrega algo rico del menú.
-      </p>
-
-      <div class="border-top pt-3">
-        <!-- Barra: cuánto falta para el envío gratis -->
-        <small id="textoEnvio" class="d-block texto-suave mb-1"></small>
-        <div class="progress mb-3" style="height: 8px;">
-          <div id="barraEnvio" class="progress-bar barra-envio" style="width: 0%;"></div>
-        </div>
-
-        <div class="d-flex justify-content-between mb-3">
-          <span class="fs-5">Subtotal</span>
-          <span id="total" class="precio">0,00 €</span>
-        </div>
-        <button id="btnFormalizar" class="btn btn-rosa w-100" disabled>
-          Formalizar pedido
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== MODAL: FORMALIZAR PEDIDO ========== -->
-  <div class="modal fade" id="modalPedido" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Datos del pedido 🧾</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <!-- Paso 1: formulario -->
-        <form id="formPedido">
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="pedNombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="pedNombre" required>
-            </div>
-            <div class="mb-3">
-              <label for="pedTelefono" class="form-label">Teléfono</label>
-              <input type="tel" class="form-control" id="pedTelefono" required>
-            </div>
-
-            <!-- ¿Recoger o a domicilio? -->
-            <label class="form-label d-block">¿Cómo lo quieres?</label>
-            <div class="btn-group w-100 mb-3">
-              <input type="radio" class="btn-check" name="entrega" id="recoger" value="Recoger en tienda" checked>
-              <label class="btn btn-borde" for="recoger">🏪 Recoger</label>
-              <input type="radio" class="btn-check" name="entrega" id="domicilio" value="A domicilio">
-              <label class="btn btn-borde" for="domicilio">🛵 A domicilio</label>
-            </div>
-
-            <!-- Solo se muestra si elige "A domicilio" -->
-            <div id="campoDireccion" class="mb-3 d-none">
-              <label for="pedDireccion" class="form-label">Dirección</label>
-              <input type="text" class="form-control" id="pedDireccion">
-            </div>
-
-            <div class="row g-3 mb-3">
-              <div class="col-6">
-                <label for="pedHora" class="form-label">Hora</label>
-                <input type="time" class="form-control" id="pedHora" required>
-              </div>
-              <div class="col-6">
-                <label for="pedPago" class="form-label">Pago</label>
-                <select class="form-select" id="pedPago">
-                  <option>Efectivo</option>
-                  <option>Tarjeta al recibir</option>
-                  <option>Bizum</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="pedNotas" class="form-label">Notas (opcional)</label>
-              <textarea class="form-control" id="pedNotas" rows="2" placeholder="Ej: leche de avena, sin azúcar..."></textarea>
-            </div>
-
-            <!-- Código de descuento -->
-            <label for="pedCupon" class="form-label">Código de descuento</label>
-            <div class="input-group mb-1">
-              <input type="text" class="form-control" id="pedCupon" placeholder="Prueba con DALBIT10">
-              <button type="button" class="btn btn-borde" id="btnCupon">Aplicar</button>
-            </div>
-            <small id="mensajeCupon" class="d-block mb-3"></small>
-
-            <!-- Cuentas del pedido -->
-            <div class="resumen">
-              <div class="d-flex justify-content-between">
-                <span>Subtotal</span><span id="resSubtotal"></span>
-              </div>
-              <div class="d-flex justify-content-between text-success">
-                <span>Descuento</span><span id="resDescuento"></span>
-              </div>
-              <div class="d-flex justify-content-between">
-                <span>Envío</span><span id="resEnvio"></span>
-              </div>
-              <div class="d-flex justify-content-between fw-bold border-top mt-2 pt-2">
-                <span>Total a pagar</span>
-                <span id="totalModal" class="precio">0,00 €</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Volver</button>
-            <button type="submit" class="btn btn-rosa">Confirmar pedido</button>
-          </div>
-        </form>
-
-        <!-- Paso 2: confirmación (oculta al inicio) -->
-        <div id="pedidoListo" class="modal-body text-center d-none">
-          <div class="icono-listo">✅</div>
-          <h4>¡Pedido recibido!</h4>
-          <p class="texto-suave mb-2">Número de pedido: <strong id="numPedido"></strong></p>
-          <div id="resumenPedido" class="resumen text-start"></div>
-          <button type="button" class="btn btn-rosa mt-3" data-bs-dismiss="modal">¡Gracias! 💗</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Carrito flotante (solo en celular, donde el menú de arriba está escondido) -->
-  <button class="btn btn-rosa carrito-flotante d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
-    🛒 <span class="numero-carrito">0</span>
-  </button>
-
-  <!-- Botón para volver arriba -->
-  <a href="#inicio" id="btnArriba" class="btn btn-arriba">↑</a>
-
-  <!-- Aviso pequeño al agregar productos (Toast de Bootstrap) -->
-  <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
-    <div id="aviso" class="toast aviso" role="alert">
-      <div class="toast-body" id="textoAviso">Agregado</div>
-    </div>
-  </div>
-
-  <!-- JavaScript de Bootstrap (archivo local) y el mío -->
+  <!-- JavaScript: Bootstrap, piezas comunes y código común -->
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/plantilla.js"></script>
+  <script src="js/comun.js"></script>
 </body>
 </html>

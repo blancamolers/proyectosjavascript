@@ -58,6 +58,30 @@ h1, h2, h3, h4, h5, .logo, .precio {
   padding: 0.7rem 1rem;
 }
 
+/* Cuando la cajita va dentro de algo blanco, la ponemos crema */
+.fondo-crema {
+  background-color: var(--crema);
+}
+
+/* Cajas grandes con sombra: tarjetas del menú y cajas de pedido.html */
+.tarjeta,
+.caja {
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(107, 79, 63, 0.08);
+}
+
+.caja {
+  display: block;
+  background-color: white;
+  padding: 1.8rem;
+}
+
+/* Para que el pie quede abajo aunque la página tenga poco contenido */
+main {
+  min-height: 65vh;
+}
+
 /* ===== BOTONES ===== */
 /* Lo que comparten los dos estilos de botón */
 .btn-rosa,
@@ -113,8 +137,14 @@ h1, h2, h3, h4, h5, .logo, .precio {
   color: var(--cafe);
 }
 
-.navbar-cafe .nav-link:hover {
+/* Enlace de la página en la que estás */
+.navbar-cafe .nav-link:hover,
+.navbar-cafe .nav-link.active {
   color: var(--rosa-oscuro);
+}
+
+.navbar-cafe .nav-link.active {
+  font-weight: bold;
 }
 
 /* ===== PORTADA ===== */
@@ -186,15 +216,34 @@ h1, h2, h3, h4, h5, .logo, .precio {
 }
 
 .tarjeta {
-  border: none;
-  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(107, 79, 63, 0.08);
+}
+
+/* Tarjetas y accesos se levantan al pasar el mouse */
+.tarjeta,
+.acceso {
   transition: transform 0.2s;
 }
 
-.tarjeta:hover {
+.tarjeta:hover,
+.acceso:hover {
   transform: translateY(-6px);
+}
+
+/* Accesos rápidos de la portada (son enlaces) */
+.acceso {
+  height: 100%;
+  color: var(--cafe);
+  text-decoration: none;
+}
+
+.acceso:hover {
+  color: var(--cafe);
+}
+
+.icono-grande {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .tarjeta .card-footer {

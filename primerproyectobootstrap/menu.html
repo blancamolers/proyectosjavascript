@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú · Dalbit Café</title>
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (archivo local) y mis estilos -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="menu">
+
+  <!-- Aquí plantilla.js pone el menú de arriba -->
+  <div id="cabecera"></div>
+
+  <!-- ========== MENÚ ========== -->
+  <main class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="titulo-seccion">Nuestro menú</h1>
+        <p class="texto-suave">Todo se prepara al momento, con mucho cariño.</p>
+      </div>
+
+      <!-- Buscador y botones de filtro -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-12 col-md-6">
+          <input type="search" id="buscador" class="form-control buscador" placeholder="🔍 Buscar en el menú...">
+        </div>
+      </div>
+      <div class="text-center mb-5">
+        <button class="btn btn-borde btn-filtro activo" data-filtro="todos">Todos</button>
+        <button class="btn btn-borde btn-filtro" data-filtro="bebidas">☕ Bebidas</button>
+        <button class="btn btn-borde btn-filtro" data-filtro="postres">🍰 Postres</button>
+        <button class="btn btn-borde btn-filtro" data-filtro="croissants">🥐 Croissants</button>
+      </div>
+
+      <!-- Mensaje si la búsqueda no encuentra nada -->
+      <p id="sinResultados" class="text-center texto-suave d-none">No encontramos nada con ese nombre 🥲</p>
+
+      <!-- Las tarjetas las crea js/menu.js con la lista "productos" -->
+      <div class="grupo" data-categoria="bebidas">
+        <h3 class="categoria">☕ Bebidas</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+
+      <div class="grupo" data-categoria="postres">
+        <h3 class="categoria">🍰 Postres</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+
+      <div class="grupo" data-categoria="croissants">
+        <h3 class="categoria">🥐 Croissants</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
+  <div id="piezasComunes"></div>
+
+  <!-- JavaScript: Bootstrap, piezas comunes, código común y el de esta página -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/plantilla.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

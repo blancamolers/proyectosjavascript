@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi pedido · Dalbit Café</title>
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (archivo local) y mis estilos -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="pedido">
+
+  <!-- Aquí plantilla.js pone el menú de arriba -->
+  <div id="cabecera"></div>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="titulo-seccion">Formalizar pedido 🧾</h1>
+        <p class="texto-suave">Revisa lo que llevas y completa tus datos.</p>
+      </div>
+
+      <!-- Si el carrito está vacío (lo decide pedido.js) -->
+      <div id="pedidoVacio" class="text-center d-none">
+        <p class="fs-5 texto-suave">Tu pedido está vacío 🥺</p>
+        <a href="menu.html" class="btn btn-rosa">Ir al menú</a>
+      </div>
+
+      <!-- ========== FORMULARIO ========== -->
+      <form id="formPedido" class="row g-4">
+
+        <!-- Columna izquierda: datos del cliente -->
+        <div class="col-12 col-lg-7">
+          <div class="caja">
+            <h4 class="mb-4">Tus datos</h4>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="pedNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="pedNombre" required>
+              </div>
+              <div class="col-md-6">
+                <label for="pedTelefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="pedTelefono" required>
+              </div>
+            </div>
+
+            <!-- ¿Recoger o a domicilio? -->
+            <label class="form-label d-block">¿Cómo lo quieres?</label>
+            <div class="btn-group w-100 mb-3">
+              <input type="radio" class="btn-check" name="entrega" id="recoger" value="Recoger en tienda" checked>
+              <label class="btn btn-borde" for="recoger">🏪 Recoger</label>
+              <input type="radio" class="btn-check" name="entrega" id="domicilio" value="A domicilio">
+              <label class="btn btn-borde" for="domicilio">🛵 A domicilio</label>
+            </div>
+
+            <!-- Solo se muestra si elige "A domicilio" -->
+            <div id="campoDireccion" class="mb-3 d-none">
+              <label for="pedDireccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="pedDireccion">
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label for="pedHora" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="pedHora" required>
+              </div>
+              <div class="col-6">
+                <label for="pedPago" class="form-label">Pago</label>
+                <select class="form-select" id="pedPago">
+                  <option>Efectivo</option>
+                  <option>Tarjeta al recibir</option>
+                  <option>Bizum</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="pedNotas" class="form-label">Notas (opcional)</label>
+            <textarea class="form-control" id="pedNotas" rows="3" placeholder="Ej: leche de avena, sin azúcar..."></textarea>
+          </div>
+        </div>
+
+        <!-- Columna derecha: resumen del pedido -->
+        <div class="col-12 col-lg-5">
+          <div class="caja">
+            <h4 class="mb-3">Tu pedido</h4>
+
+            <!-- Aquí pedido.js pinta los productos -->
+            <ul id="resumenLista" class="list-unstyled"></ul>
+            <a href="menu.html" class="d-inline-block mb-3">+ Agregar más cosas</a>
+
+            <!-- Código de descuento -->
+            <label for="pedCupon" class="form-label d-block">Código de descuento</label>
+            <div class="input-group mb-1">
+              <input type="text" class="form-control" id="pedCupon" placeholder="Prueba con DALBIT10">
+              <button type="button" class="btn btn-borde" id="btnCupon">Aplicar</button>
+            </div>
+            <small id="mensajeCupon" class="d-block mb-3"></small>
+
+            <!-- Cuentas -->
+            <div class="resumen fondo-crema mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Subtotal</span><span id="resSubtotal"></span>
+              </div>
+              <div class="d-flex justify-content-between text-success">
+                <span>Descuento</span><span id="resDescuento"></span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Envío</span><span id="resEnvio"></span>
+              </div>
+              <div class="d-flex justify-content-between fw-bold border-top mt-2 pt-2">
+                <span>Total a pagar</span>
+                <span id="totalPedido" class="precio">0,00 €</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-rosa btn-lg w-100">Confirmar pedido</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- ========== CONFIRMACIÓN (oculta al inicio) ========== -->
+      <div id="pedidoListo" class="caja text-center mx-auto d-none" style="max-width: 560px;">
+        <div class="icono-listo">✅</div>
+        <h2>¡Pedido recibido!</h2>
+        <p class="texto-suave mb-3">Número de pedido: <strong id="numPedido"></strong></p>
+        <div id="resumenPedido" class="resumen fondo-crema text-start"></div>
+        <a href="index.html" class="btn btn-rosa mt-4">Volver al inicio 💗</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
+  <div id="piezasComunes"></div>
+
+  <!-- JavaScript: Bootstrap, piezas comunes, código común y el de esta página -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/plantilla.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/pedido.js"></script>
+</body>
+</html>
