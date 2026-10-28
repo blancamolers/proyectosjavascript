@@ -22,6 +22,9 @@
   /* Bootstrap usa estas variables en todas sus clases */
   --bs-primary: var(--rosa);                 /* text-primary, bg-primary...  */
   --bs-primary-rgb: 217, 103, 138;
+  --bs-primary-bg-subtle: var(--rosa-claro); /* bg-primary-subtle (rosa suave) */
+  --bs-primary-border-subtle: #f8c6d3;
+  --bs-primary-text-emphasis: var(--rosa-oscuro);
   --bs-dark-rgb: 107, 79, 63;                /* bg-dark y text-bg-dark = café */
   --bs-body-bg: var(--crema);                /* fondo de la página           */
   --bs-body-bg-rgb: 253, 248, 243;
@@ -29,6 +32,7 @@
   --bs-body-color-rgb: 107, 79, 63;
   --bs-secondary-color: var(--cafe-suave);   /* text-body-secondary          */
   --bs-tertiary-bg: var(--crema-oscuro);     /* bg-body-tertiary             */
+  --bs-tertiary-bg-rgb: 245, 235, 224;
   --bs-link-color-rgb: 196, 82, 111;         /* color de los enlaces         */
   --bs-link-hover-color-rgb: 107, 79, 63;
   --bs-body-font-family: "Gowun Dodum", sans-serif;
@@ -80,6 +84,12 @@
   --bs-accordion-active-bg: var(--rosa-claro);
   --bs-accordion-active-color: var(--cafe);
   --bs-accordion-btn-focus-box-shadow: none;
+}
+
+/* Tabla del horario: sin fondo y con el día de hoy en rosa */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-active-bg: var(--rosa-claro);
 }
 
 /* Al escribir en un campo (Bootstrap lo trae en azul fijo, sin variable) */
@@ -139,6 +149,22 @@ h1, h2, h3, h4, h5, .logo, .precio {
   padding: 0;
 }
 
+/* Círculo de los iconos de "¿Por qué Dalbit?" */
+.circulo {
+  width: 72px;
+  height: 72px;
+}
+
+/* Respeta los saltos de línea del mensaje de WhatsApp */
+.texto-lineas {
+  white-space: pre-line;
+}
+
+/* El resumen del pedido baja contigo, sin quedar debajo del menú de arriba */
+.resumen-fijo {
+  top: 90px;
+}
+
 
 /* ===== ANIMACIONES ===== */
 
@@ -164,7 +190,7 @@ h1, h2, h3, h4, h5, .logo, .precio {
   transform: translateY(0);
 }
 
-/* El contador del carrito salta al agregar algo */
+/* El contador del carrito salta al añadir algo */
 .contador.saltar {
   animation: saltar 0.4s;
 }
@@ -199,7 +225,27 @@ h1, h2, h3, h4, h5, .logo, .precio {
 }
 
 
-/* ===== CELULAR ===== */
+/* Si alguien tiene activado "reducir movimiento" en su móvil u ordenador,
+   quitamos las animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .aparecer {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .levantar:hover {
+    transform: none;
+  }
+
+  .contador.saltar,
+  .icono-listo {
+    animation: none;
+  }
+}
+
+
+/* ===== MÓVIL ===== */
 @media (max-width: 576px) {
   .slide {
     height: 340px;

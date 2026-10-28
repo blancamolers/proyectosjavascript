@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Icono de la pestaña: una taza rosa con una luna (Dalbit = luz de luna) -->
+  <circle cx="32" cy="32" r="31" fill="#fde4ea"/>
+  <path d="M16 26h28v12a12 12 0 0 1-12 12h-4a12 12 0 0 1-12-12z" fill="#d9678a"/>
+  <path d="M44 29h3a6 6 0 0 1 0 12h-3" fill="none" stroke="#d9678a" stroke-width="4"/>
+  <path d="M33 33a6 6 0 1 1-6-8 5 5 0 0 0 6 8z" fill="#fff8e7"/>
+  <path d="M24 12q-3 4 0 8M32 10q-3 5 0 10M40 12q-3 4 0 8" fill="none" stroke="#6b4f3f" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

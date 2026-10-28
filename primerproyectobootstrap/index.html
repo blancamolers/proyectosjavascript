@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dalbit Café</title>
+  <title>Dalbit Café · Cafetería coreana, postres y croissants</title>
+
+  <!-- Para Google y para cuando se comparte el enlace -->
+  <meta name="description" content="Dalbit Café: cafés, bingsu, croffles y croissants recién hechos al estilo de Seúl. Pide para recoger o a domicilio, o reserva tu mesa.">
+  <meta name="theme-color" content="#d9678a">
+  <meta property="og:title" content="Dalbit Café · Un rincón dulce al estilo de Seúl">
+  <meta property="og:description" content="Cafés, postres coreanos y croissants recién hechos. Pide online o reserva tu mesa.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,107 +27,217 @@
   <!-- Aquí plantilla.js pone el menú de arriba -->
   <div id="cabecera" class="sticky-top"></div>
 
-  <!-- ========== PORTADA ========== -->
-  <header class="portada py-5">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-12 col-lg-6 text-center text-lg-start">
-          <p class="text-primary text-uppercase fw-bold small mb-1">Bienvenidos</p>
-          <h1 class="display-4">Un rincón dulce<br>al estilo de Seúl</h1>
-          <p class="lead text-body-secondary my-4">
-            Croffles recién hechos, croissants de mantequilla y chocolate, bingsu esponjoso y lattes de fresa
-            en un lugar tranquilo para estudiar, platicar o simplemente descansar.
-          </p>
-          <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-            <a href="menu.html" class="btn btn-primary rounded-pill px-4 btn-lg">Ver menú</a>
-            <button class="btn btn-outline-primary rounded-pill px-4 btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">
-              Reservar
-            </button>
+  <main class="flex-grow-1">
+
+    <!-- ========== PORTADA ========== -->
+    <header class="portada py-5">
+      <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <p class="text-primary text-uppercase fw-bold small mb-1">달빛 · Luz de luna 🌙</p>
+            <h1 class="display-4">Un rincón dulce<br>al estilo de Seúl</h1>
+            <p class="lead text-body-secondary my-4">
+              Croffles recién hechos, croissants de mantequilla y chocolate, bingsu esponjoso y lattes de fresa
+              en un sitio tranquilo para estudiar, charlar o simplemente desconectar.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+              <a href="menu.html" class="btn btn-primary rounded-pill px-4 btn-lg">Pedir ahora</a>
+              <button class="btn btn-outline-primary rounded-pill px-4 btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">
+                Reservar mesa
+              </button>
+            </div>
+
+            <!-- Ventajas rápidas -->
+            <ul class="list-inline small text-body-secondary mt-4 mb-0">
+              <li class="list-inline-item me-3">🛵 Envío gratis desde <span data-dato="envioGratisDesde"></span></li>
+              <li class="list-inline-item me-3">🌱 Opciones veganas</li>
+              <li class="list-inline-item">📶 Wifi y enchufes</li>
+            </ul>
           </div>
-        </div>
 
-        <!-- Carrusel de platillos -->
-        <div class="col-12 col-lg-6">
-          <div id="carruselPlatillos" class="carousel slide carousel-fade rounded-5 overflow-hidden" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carruselPlatillos" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#carruselPlatillos" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#carruselPlatillos" data-bs-slide-to="2"></button>
+          <!-- Carrusel de platos -->
+          <div class="col-12 col-lg-6">
+            <div id="carruselPlatos" class="carousel slide carousel-fade rounded-5 overflow-hidden shadow" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselPlatos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Latte de fresa"></button>
+                <button type="button" data-bs-target="#carruselPlatos" data-bs-slide-to="1" aria-label="Matcha latte"></button>
+                <button type="button" data-bs-target="#carruselPlatos" data-bs-slide-to="2" aria-label="Croffle de miel"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="slide slide-rosa d-flex flex-column align-items-center justify-content-center text-center p-4">
+                    <img src="img/latte-fresa.svg" class="slide-img rounded-4 mb-3" alt="Latte de fresa">
+                    <h2 class="h3">Latte de Fresa</h2>
+                    <p>Leche fresca con fresas naturales</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slide slide-verde d-flex flex-column align-items-center justify-content-center text-center p-4">
+                    <img src="img/matcha-latte.svg" class="slide-img rounded-4 mb-3" alt="Matcha latte">
+                    <h2 class="h3">Matcha Latte</h2>
+                    <p>Té verde con leche y espuma suave</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slide slide-crema d-flex flex-column align-items-center justify-content-center text-center p-4">
+                    <img src="img/croffle.svg" class="slide-img rounded-4 mb-3" alt="Croffle">
+                    <h2 class="h3">Croffle de Miel</h2>
+                    <p>Croissant en gofrera con miel y helado</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carruselPlatos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carruselPlatos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
             </div>
-
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="slide slide-rosa d-flex flex-column align-items-center justify-content-center text-center p-4">
-                  <img src="img/latte-fresa.svg" class="slide-img rounded-4 mb-3" alt="Latte de fresa">
-                  <h3>Latte de Fresa</h3>
-                  <p>Leche fresca con fresas naturales</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="slide slide-verde d-flex flex-column align-items-center justify-content-center text-center p-4">
-                  <img src="img/matcha-latte.svg" class="slide-img rounded-4 mb-3" alt="Matcha latte">
-                  <h3>Matcha Latte</h3>
-                  <p>Té verde con leche y espuma suave</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="slide slide-crema d-flex flex-column align-items-center justify-content-center text-center p-4">
-                  <img src="img/croffle.svg" class="slide-img rounded-4 mb-3" alt="Croffle">
-                  <h3>Croffle de Miel</h3>
-                  <p>Croissant en waflera con miel y helado</p>
-                </div>
-              </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carruselPlatillos" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carruselPlatillos" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ========== ¿QUÉ QUIERES HACER? ========== -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="display-6 text-center mb-5">¿Qué te apetece hoy?</h2>
+    <!-- ========== ¿POR QUÉ DALBIT? ========== -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="display-6 text-center mb-5">¿Por qué Dalbit?</h2>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
-        <div class="col aparecer">
-          <a href="menu.html" class="d-block h-100 bg-white rounded-4 shadow-sm p-4 text-body text-decoration-none levantar">
-            <div class="display-4 mb-2">🍰</div>
-            <h4>Ver el menú</h4>
-            <p class="text-body-secondary mb-0">Bebidas, postres y croissants recién hechos.</p>
-          </a>
-        </div>
-        <div class="col aparecer">
-          <a href="pedido.html" class="d-block h-100 bg-white rounded-4 shadow-sm p-4 text-body text-decoration-none levantar">
-            <div class="display-4 mb-2">🛵</div>
-            <h4>Hacer un pedido</h4>
-            <p class="text-body-secondary mb-0">Para recoger o a domicilio. Gratis desde 20 €.</p>
-          </a>
-        </div>
-        <div class="col aparecer">
-          <a href="informacion.html" class="d-block h-100 bg-white rounded-4 shadow-sm p-4 text-body text-decoration-none levantar">
-            <div class="display-4 mb-2">🕒</div>
-            <h4>Horarios</h4>
-            <p class="text-body-secondary mb-0">Dónde estamos, horario y preguntas frecuentes.</p>
-          </a>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center">
+          <div class="col aparecer">
+            <div class="circulo d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle fs-2 mb-3">🥐</div>
+            <h3 class="h5">Recién hecho</h3>
+            <p class="text-body-secondary mb-0">Horneamos croissants y croffles cada mañana.</p>
+          </div>
+          <div class="col aparecer">
+            <div class="circulo d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle fs-2 mb-3">🇰🇷</div>
+            <h3 class="h5">Recetas de Seúl</h3>
+            <p class="text-body-secondary mb-0">Bingsu, café dalgona y té de yuzu como en Corea.</p>
+          </div>
+          <div class="col aparecer">
+            <div class="circulo d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle fs-2 mb-3">🌱</div>
+            <h3 class="h5">Para todos</h3>
+            <p class="text-body-secondary mb-0">Leche de avena o almendra sin coste extra.</p>
+          </div>
+          <div class="col aparecer">
+            <div class="circulo d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle fs-2 mb-3">📶</div>
+            <h3 class="h5">Tu sitio para estudiar</h3>
+            <p class="text-body-secondary mb-0">Wifi gratis y enchufes en casi todas las mesas.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ========== LO MÁS PEDIDO ========== -->
+    <section class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+          <div>
+            <h2 class="display-6 mb-1">Lo más pedido</h2>
+            <p class="text-body-secondary mb-0">Los favoritos de la casa y las novedades.</p>
+          </div>
+          <a href="menu.html" class="btn btn-outline-primary rounded-pill px-4">Ver todo el menú →</a>
+        </div>
+
+        <!-- inicio.js pone aquí los productos que tienen insignia en datos.js -->
+        <div id="destacados" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
+      </div>
+    </section>
+
+    <!-- ========== NUESTRA HISTORIA ========== -->
+    <!-- Cuenta aquí la historia real del negocio -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-5 aparecer">
+            <div class="position-relative">
+              <img src="img/cafe-dalgona.svg" class="img-fluid rounded-5 shadow" alt="Café dalgona de Dalbit Café" width="600" height="440" loading="lazy">
+              <span class="badge rounded-pill text-bg-dark fs-6 position-absolute bottom-0 start-0 m-3 px-3 py-2">🌙 Hecho cada mañana</span>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7 aparecer">
+            <p class="text-primary text-uppercase fw-bold small mb-1">Nuestra historia</p>
+            <h2 class="display-6 mb-4">Un pedacito de Seúl en tu barrio</h2>
+            <p class="text-body-secondary">
+              <strong>Dalbit</strong> (달빛) significa «luz de luna» en coreano. El café nació después de un viaje a Seúl,
+              con ganas de traer aquí esas cafeterías pequeñas y acogedoras donde el tiempo va más despacio.
+            </p>
+            <p class="text-body-secondary mb-4">
+              Cada mañana preparamos los croissants, la masa de los croffles y las perlas de los postres.
+              Nada de prisas: café rico, algo dulce y un rato para ti.
+            </p>
+            <a href="informacion.html" class="btn btn-primary rounded-pill px-4">Ven a conocernos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OPINIONES ========== -->
+    <!-- ⚠️ Opiniones de EJEMPLO: cámbialas por opiniones reales de clientes antes de publicar la web -->
+    <section class="py-5 bg-body-tertiary">
+      <div class="container">
+        <h2 class="display-6 text-center mb-5">Lo que dicen nuestros clientes</h2>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col aparecer">
+            <figure class="h-100 bg-white rounded-4 shadow-sm p-4 mb-0">
+              <div class="text-warning mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
+              <blockquote class="mb-3">
+                <p class="mb-0">«El bingsu de mango es una pasada y el sitio es precioso. Ya es nuestra cafetería de los domingos.»</p>
+              </blockquote>
+              <figcaption class="text-body-secondary small">— Lucía M.</figcaption>
+            </figure>
+          </div>
+          <div class="col aparecer">
+            <figure class="h-100 bg-white rounded-4 shadow-sm p-4 mb-0">
+              <div class="text-warning mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
+              <blockquote class="mb-3">
+                <p class="mb-0">«Vengo a estudiar casi todos los días: buen wifi, enchufes y el mejor croissant de chocolate.»</p>
+              </blockquote>
+              <figcaption class="text-body-secondary small">— Daniel R.</figcaption>
+            </figure>
+          </div>
+          <div class="col aparecer">
+            <figure class="h-100 bg-white rounded-4 shadow-sm p-4 mb-0">
+              <div class="text-warning mb-2" aria-label="5 de 5 estrellas">★★★★★</div>
+              <blockquote class="mb-3">
+                <p class="mb-0">«Pedí a domicilio por WhatsApp y llegó todo perfecto. El latte de fresa, buenísimo.»</p>
+              </blockquote>
+              <figcaption class="text-body-secondary small">— Sofía G.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LLAMADA A LA ACCIÓN ========== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="bg-primary text-white rounded-5 shadow p-4 p-lg-5 text-center aparecer">
+          <h2 class="display-6 mb-3">¿Se te ha antojado algo?</h2>
+          <p class="lead mb-4">Pide ahora para recoger o a domicilio. Gratis a partir de <span data-dato="envioGratisDesde"></span>.</p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="menu.html" class="btn btn-light btn-lg rounded-pill px-4">🛒 Hacer un pedido</a>
+            <button class="btn btn-outline-light btn-lg rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalReserva">📅 Reservar mesa</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
   <div id="piezasComunes"></div>
 
-  <!-- JavaScript: Bootstrap, piezas comunes y código común -->
+  <!-- JavaScript: Bootstrap, datos, piezas comunes, código común y el de esta página -->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/datos.js"></script>
   <script src="js/plantilla.js"></script>
   <script src="js/comun.js"></script>
+  <script src="js/inicio.js"></script>
 </body>
 </html>

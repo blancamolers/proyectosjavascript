@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Menú · Dalbit Café</title>
 
+  <!-- Para Google y para cuando se comparte el enlace -->
+  <meta name="description" content="Carta de Dalbit Café: lattes, café dalgona, matcha, bingsu, croffles, mochis y croissants. Pide online para recoger o a domicilio.">
+  <meta name="theme-color" content="#d9678a">
+  <meta property="og:title" content="Menú · Dalbit Café">
+  <meta property="og:description" content="Cafés, postres coreanos y croissants. Pide online para recoger o a domicilio.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,48 +32,51 @@
     <div class="container">
       <div class="text-center mb-5">
         <h1 class="display-6">Nuestro menú</h1>
-        <p class="text-body-secondary">Todo se prepara al momento, con mucho cariño.</p>
+        <p class="text-body-secondary mb-0">Todo se prepara al momento, con mucho cariño.</p>
+        <p class="small text-body-secondary">🛵 Envío gratis desde <span data-dato="envioGratisDesde"></span> · 🌱 Leche vegetal sin coste extra</p>
       </div>
 
       <!-- Buscador y botones de filtro -->
       <div class="row justify-content-center mb-4">
         <div class="col-12 col-md-6">
+          <label for="buscador" class="visually-hidden">Buscar en el menú</label>
           <input type="search" id="buscador" class="form-control form-control-lg rounded-pill" placeholder="🔍 Buscar en el menú...">
         </div>
       </div>
       <div class="text-center mb-5">
-        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro active" data-filtro="todos">Todos</button>
-        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro" data-filtro="bebidas">☕ Bebidas</button>
-        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro" data-filtro="postres">🍰 Postres</button>
-        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro" data-filtro="croissants">🥐 Croissants</button>
+        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro active" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro" data-filtro="bebidas" aria-pressed="false">☕ Bebidas</button>
+        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro" data-filtro="postres" aria-pressed="false">🍰 Postres</button>
+        <button class="btn btn-outline-primary rounded-pill px-4 m-1 btn-filtro" data-filtro="croissants" aria-pressed="false">🥐 Croissants</button>
       </div>
 
       <!-- Mensaje si la búsqueda no encuentra nada -->
-      <p id="sinResultados" class="text-center text-body-secondary d-none">No encontramos nada con ese nombre 🥲</p>
+      <p id="sinResultados" class="text-center text-body-secondary d-none">No hemos encontrado nada con ese nombre 🥲</p>
 
-      <!-- Las tarjetas las crea js/menu.js con la lista "productos" -->
-      <div class="grupo mb-5" data-categoria="bebidas">
-        <h3 class="mb-4">☕ Bebidas</h3>
+      <!-- Las tarjetas las crea js/menu.js con la lista "productos" de datos.js -->
+      <section class="grupo mb-5" data-categoria="bebidas">
+        <h2 class="h3 mb-4">☕ Bebidas</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
-      </div>
+      </section>
 
-      <div class="grupo mb-5" data-categoria="postres">
-        <h3 class="mb-4">🍰 Postres</h3>
+      <section class="grupo mb-5" data-categoria="postres">
+        <h2 class="h3 mb-4">🍰 Postres</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
-      </div>
+      </section>
 
-      <div class="grupo mb-5" data-categoria="croissants">
-        <h3 class="mb-4">🥐 Croissants</h3>
+      <section class="grupo mb-5" data-categoria="croissants">
+        <h2 class="h3 mb-4">🥐 Croissants</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"></div>
-      </div>
+      </section>
     </div>
   </main>
 
   <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
   <div id="piezasComunes"></div>
 
-  <!-- JavaScript: Bootstrap, piezas comunes, código común y el de esta página -->
+  <!-- JavaScript: Bootstrap, datos, piezas comunes, código común y el de esta página -->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/datos.js"></script>
   <script src="js/plantilla.js"></script>
   <script src="js/comun.js"></script>
   <script src="js/menu.js"></script>

@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Información · Dalbit Café</title>
 
+  <!-- Para Google y para cuando se comparte el enlace -->
+  <meta name="description" content="Dónde está Dalbit Café, horario de apertura, contacto por teléfono y WhatsApp, y preguntas frecuentes.">
+  <meta name="theme-color" content="#d9678a">
+  <meta property="og:title" content="Información · Dalbit Café">
+  <meta property="og:description" content="Horario, dirección, contacto y preguntas frecuentes.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +27,6 @@
   <!-- Aquí plantilla.js pone el menú de arriba -->
   <div id="cabecera" class="sticky-top"></div>
 
-  <!-- ========== HORARIOS Y PREGUNTAS ========== -->
   <main class="flex-grow-1 py-5 bg-body-tertiary">
     <div class="container">
       <div class="text-center mb-5">
@@ -27,75 +34,115 @@
         <p class="text-body-secondary">Todo lo que necesitas saber antes de venir.</p>
       </div>
 
+      <!-- ========== DÓNDE, CONTACTO Y HORARIO ========== -->
+      <!-- Los datos salen de datos.js (data-dato y data-enlace) -->
+      <div class="row g-4 mb-5">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="h-100 bg-white rounded-4 shadow-sm p-4">
+            <div class="display-6 mb-2">📍</div>
+            <h2 class="h4">Dónde estamos</h2>
+            <p class="text-body-secondary" data-dato="direccion"></p>
+            <a data-enlace="mapa" class="btn btn-primary rounded-pill px-4" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="h-100 bg-white rounded-4 shadow-sm p-4">
+            <div class="display-6 mb-2">💬</div>
+            <h2 class="h4">Contacto</h2>
+            <ul class="list-unstyled text-body-secondary">
+              <li class="mb-1">📞 <a data-enlace="telefono"><span data-dato="telefono"></span></a></li>
+              <li>✉️ <a data-enlace="email"><span data-dato="email"></span></a></li>
+            </ul>
+            <a data-enlace="whatsapp" class="btn btn-success rounded-pill px-4" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="h-100 bg-white rounded-4 shadow-sm p-4">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="display-6 mb-2">🕒</div>
+              <span class="badge rounded-pill bg-white text-body border fw-normal estado-local"></span>
+            </div>
+            <h2 class="h4">Horario</h2>
+            <table class="table table-sm table-borderless mb-0">
+              <!-- informacion.js rellena las filas con el horario de datos.js -->
+              <tbody id="tablaHorario"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== PREGUNTAS FRECUENTES ========== -->
+      <h2 class="display-6 text-center mb-4">Preguntas frecuentes</h2>
+
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8">
           <div class="accordion" id="acordeonInfo">
 
             <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
-              <h2 class="accordion-header">
+              <h3 class="accordion-header">
                 <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#info1">
-                  🕒 ¿Cuál es el horario?
+                  📶 ¿Se puede ir a estudiar o a teletrabajar?
                 </button>
-              </h2>
+              </h3>
               <div id="info1" class="accordion-collapse collapse show" data-bs-parent="#acordeonInfo">
                 <div class="accordion-body">
-                  <ul class="list-unstyled mb-0">
-                    <li><strong>Lunes a viernes:</strong> 9:00 – 21:00</li>
-                    <li><strong>Sábado:</strong> 10:00 – 22:00</li>
-                    <li><strong>Domingo:</strong> 10:00 – 20:00</li>
-                  </ul>
+                  ¡Claro! Tenemos wifi gratis y enchufes en casi todas las mesas. Entre semana por la mañana está muy tranquilo.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
-              <h2 class="accordion-header">
+              <h3 class="accordion-header">
                 <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info2">
-                  📍 ¿Dónde están ubicados?
+                  🌱 ¿Tenéis opciones veganas?
                 </button>
-              </h2>
+              </h3>
               <div id="info2" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
                 <div class="accordion-body">
-                  Calle de las Flores 24, a dos cuadras del parque central.
+                  Sí. Todas las bebidas se pueden pedir con leche de avena o de almendra sin coste extra.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
-              <h2 class="accordion-header">
+              <h3 class="accordion-header">
                 <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info3">
-                  📶 ¿Tienen wifi y enchufes?
+                  🛵 ¿Hacéis envíos a domicilio?
                 </button>
-              </h2>
+              </h3>
               <div id="info3" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
                 <div class="accordion-body">
-                  ¡Sí! Wifi gratis y enchufes en casi todas las mesas. Ideal para estudiar.
+                  Sí, por <span data-dato="costeEnvio"></span>, y gratis si tu pedido llega a <span data-dato="envioGratisDesde"></span>.
+                  Puedes <a href="menu.html">hacer tu pedido aquí</a> y enviárnoslo por WhatsApp.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
-              <h2 class="accordion-header">
+              <h3 class="accordion-header">
                 <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info4">
-                  🌱 ¿Tienen opciones veganas?
+                  📅 ¿Hace falta reservar?
                 </button>
-              </h2>
+              </h3>
               <div id="info4" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
                 <div class="accordion-body">
-                  Todas las bebidas se pueden pedir con leche de avena o almendra sin costo extra.
+                  Entre semana no suele hacer falta. Los fines de semana se llena, así que te recomendamos
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#modalReserva">reservar mesa</a>.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
-              <h2 class="accordion-header">
+              <h3 class="accordion-header">
                 <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info5">
-                  🛵 ¿Hacen envíos a domicilio?
+                  💳 ¿Cómo se puede pagar?
                 </button>
-              </h2>
+              </h3>
               <div id="info5" class="accordion-collapse collapse" data-bs-parent="#acordeonInfo">
                 <div class="accordion-body">
-                  Sí, por 2,50 € y gratis si tu pedido llega a 20 €. Puedes <a href="pedido.html">hacer tu pedido aquí</a>.
+                  En efectivo, con tarjeta o por Bizum, tanto en el local como al recibir tu pedido.
                 </div>
               </div>
             </div>
@@ -109,9 +156,11 @@
   <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
   <div id="piezasComunes"></div>
 
-  <!-- JavaScript: Bootstrap, piezas comunes y código común -->
+  <!-- JavaScript: Bootstrap, datos, piezas comunes, código común y el de esta página -->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/datos.js"></script>
   <script src="js/plantilla.js"></script>
   <script src="js/comun.js"></script>
+  <script src="js/informacion.js"></script>
 </body>
 </html>

@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mi pedido · Dalbit Café</title>
 
+  <!-- Para Google y para cuando se comparte el enlace -->
+  <meta name="description" content="Haz tu pedido en Dalbit Café para recoger en el local o a domicilio y envíanoslo por WhatsApp.">
+  <meta name="theme-color" content="#d9678a">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
   <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +29,7 @@
     <div class="container">
       <div class="text-center mb-5">
         <h1 class="display-6">Formalizar pedido 🧾</h1>
-        <p class="text-body-secondary">Revisa lo que llevas y completa tus datos.</p>
+        <p class="text-body-secondary">Revisa lo que llevas, rellena tus datos y envíanoslo por WhatsApp.</p>
       </div>
 
       <!-- Si el carrito está vacío (lo decide pedido.js) -->
@@ -33,28 +39,31 @@
       </div>
 
       <!-- ========== FORMULARIO ========== -->
-      <form id="formPedido" class="row g-4">
+      <!-- novalidate: los errores los enseña Bootstrap con sus estilos, no el navegador -->
+      <form id="formPedido" class="row g-4" novalidate>
 
         <!-- Columna izquierda: datos del cliente -->
         <div class="col-12 col-lg-7">
           <div class="bg-white rounded-4 shadow-sm p-4">
-            <h4 class="mb-4">Tus datos</h4>
+            <h2 class="h4 mb-4">Tus datos</h2>
 
             <div class="row g-3 mb-3">
               <div class="col-md-6">
                 <label for="pedNombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="pedNombre" required>
+                <input type="text" class="form-control" id="pedNombre" autocomplete="name" required>
+                <div class="invalid-feedback">Dinos tu nombre.</div>
               </div>
               <div class="col-md-6">
                 <label for="pedTelefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="pedTelefono" required>
+                <input type="tel" class="form-control" id="pedTelefono" autocomplete="tel" pattern="[0-9 +]{9,15}" required>
+                <div class="invalid-feedback">Escribe un teléfono válido.</div>
               </div>
             </div>
 
             <!-- ¿Recoger o a domicilio? -->
             <label class="form-label d-block">¿Cómo lo quieres?</label>
-            <div class="btn-group w-100 mb-3">
-              <input type="radio" class="btn-check" name="entrega" id="recoger" value="Recoger en tienda" checked>
+            <div class="btn-group w-100 mb-3" role="group" aria-label="Tipo de entrega">
+              <input type="radio" class="btn-check" name="entrega" id="recoger" value="Recoger en el local" checked>
               <label class="btn btn-outline-primary" for="recoger">🏪 Recoger</label>
               <input type="radio" class="btn-check" name="entrega" id="domicilio" value="A domicilio">
               <label class="btn btn-outline-primary" for="domicilio">🛵 A domicilio</label>
@@ -63,43 +72,54 @@
             <!-- Solo se muestra si elige "A domicilio" -->
             <div id="campoDireccion" class="mb-3 d-none">
               <label for="pedDireccion" class="form-label">Dirección</label>
-              <input type="text" class="form-control" id="pedDireccion">
+              <input type="text" class="form-control" id="pedDireccion" autocomplete="street-address" placeholder="Calle, número, piso...">
+              <div class="invalid-feedback">Necesitamos la dirección para llevártelo.</div>
             </div>
 
-            <div class="row g-3 mb-3">
-              <div class="col-6">
+            <div class="row g-3 mb-1">
+              <div class="col-6 col-md-4">
+                <label for="pedDia" class="form-label">Día</label>
+                <select class="form-select" id="pedDia">
+                  <option value="hoy">Hoy</option>
+                  <option value="manana">Mañana</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-4">
                 <label for="pedHora" class="form-label">Hora</label>
                 <input type="time" class="form-control" id="pedHora" required>
+                <div class="invalid-feedback">Elige una hora dentro del horario.</div>
               </div>
-              <div class="col-6">
+              <div class="col-12 col-md-4">
                 <label for="pedPago" class="form-label">Pago</label>
                 <select class="form-select" id="pedPago">
                   <option>Efectivo</option>
-                  <option>Tarjeta al recibir</option>
+                  <option>Tarjeta</option>
                   <option>Bizum</option>
                 </select>
               </div>
             </div>
+            <!-- pedido.js escribe aquí las horas posibles -->
+            <small id="ayudaHora" class="d-block text-body-secondary mb-3"></small>
 
             <label for="pedNotas" class="form-label">Notas (opcional)</label>
-            <textarea class="form-control" id="pedNotas" rows="3" placeholder="Ej: leche de avena, sin azúcar..."></textarea>
+            <textarea class="form-control" id="pedNotas" rows="3" placeholder="Ej.: leche de avena, sin azúcar..."></textarea>
           </div>
         </div>
 
         <!-- Columna derecha: resumen del pedido -->
         <div class="col-12 col-lg-5">
-          <div class="bg-white rounded-4 shadow-sm p-4">
-            <h4 class="mb-3">Tu pedido</h4>
+          <div class="bg-white rounded-4 shadow-sm p-4 sticky-lg-top resumen-fijo">
+            <h2 class="h4 mb-3">Tu pedido</h2>
 
             <!-- Aquí pedido.js pinta los productos -->
             <ul id="resumenLista" class="list-unstyled"></ul>
-            <a href="menu.html" class="d-inline-block mb-3">+ Agregar más cosas</a>
+            <a href="menu.html" class="d-inline-block mb-3">+ Añadir más cosas</a>
 
             <!-- Código de descuento -->
             <label for="pedCupon" class="form-label d-block">Código de descuento</label>
             <div class="input-group mb-1">
               <input type="text" class="form-control" id="pedCupon" placeholder="Prueba con DALBIT10">
-              <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="btnCupon">Aplicar</button>
+              <button type="button" class="btn btn-outline-primary px-4" id="btnCupon">Aplicar</button>
             </div>
             <small id="mensajeCupon" class="d-block mb-3"></small>
 
@@ -120,18 +140,29 @@
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary rounded-pill px-4 btn-lg w-100">Confirmar pedido</button>
+            <button type="submit" class="btn btn-primary rounded-pill px-4 btn-lg w-100">Continuar</button>
+            <p class="small text-body-secondary text-center mt-2 mb-0">Pagas al recoger o al recibir tu pedido.</p>
           </div>
         </div>
       </form>
 
-      <!-- ========== CONFIRMACIÓN (oculta al inicio) ========== -->
-      <div id="pedidoListo" class="bg-white rounded-4 shadow-sm p-4 text-center mx-auto d-none" style="max-width: 560px;">
-        <div class="icono-listo display-3">✅</div>
-        <h2>¡Pedido recibido!</h2>
-        <p class="text-body-secondary mb-3">Número de pedido: <strong id="numPedido"></strong></p>
-        <div id="resumenPedido" class="bg-body rounded-3 p-3 text-start"></div>
-        <a href="index.html" class="btn btn-primary rounded-pill px-4 mt-4">Volver al inicio 💗</a>
+      <!-- ========== ÚLTIMO PASO: ENVIAR POR WHATSAPP (oculto al principio) ========== -->
+      <div id="pedidoListo" class="bg-white rounded-4 shadow-sm p-4 p-md-5 text-center mx-auto d-none" style="max-width: 560px;">
+        <div class="icono-listo display-3">📲</div>
+        <h2>¡Ya casi está!</h2>
+        <p class="text-body-secondary mb-4">Último paso: envíanos el pedido por WhatsApp y empezamos a prepararlo.</p>
+        <!-- pedido.js escribe aquí el mismo mensaje que se envía -->
+        <div id="resumenPedido" class="bg-body rounded-3 p-3 text-start small texto-lineas mb-4"></div>
+        <a id="btnWhatsApp" class="btn btn-success btn-lg rounded-pill px-4 w-100 mb-2" target="_blank" rel="noopener">📲 Enviar pedido por WhatsApp</a>
+        <button id="btnEditar" type="button" class="btn btn-link">← Cambiar algo del pedido</button>
+      </div>
+
+      <!-- ========== GRACIAS (oculto al principio) ========== -->
+      <div id="pedidoEnviado" class="bg-white rounded-4 shadow-sm p-4 p-md-5 text-center mx-auto d-none" style="max-width: 560px;">
+        <div class="icono-listo display-3">💗</div>
+        <h2>¡Gracias, <span id="nombreGracias"></span>!</h2>
+        <p class="text-body-secondary mb-4">En cuanto nos llegue tu mensaje te confirmamos el pedido por WhatsApp.</p>
+        <a href="index.html" class="btn btn-primary rounded-pill px-4">Volver al inicio</a>
       </div>
     </div>
   </main>
@@ -139,8 +170,9 @@
   <!-- Aquí plantilla.js pone el pie, el carrito y las ventanas -->
   <div id="piezasComunes"></div>
 
-  <!-- JavaScript: Bootstrap, piezas comunes, código común y el de esta página -->
+  <!-- JavaScript: Bootstrap, datos, piezas comunes, código común y el de esta página -->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/datos.js"></script>
   <script src="js/plantilla.js"></script>
   <script src="js/comun.js"></script>
   <script src="js/pedido.js"></script>
