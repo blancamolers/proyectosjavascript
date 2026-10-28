@@ -147,15 +147,15 @@ function cambiarCantidad(indice, cambio) {
 // HTML de un producto del carrito (lo usan el panel lateral y pedido.html)
 function htmlProducto(producto, indice) {
   return `
-    <li class="item-carrito d-flex justify-content-between align-items-center">
+    <li class="bg-white rounded-3 px-3 py-2 mb-2 d-flex justify-content-between align-items-center">
       <div>
         <div class="fw-bold">${producto.nombre}</div>
-        <small class="texto-suave">${formatoPrecio(producto.precio)} c/u</small>
+        <small class="text-body-secondary">${formatoPrecio(producto.precio)} c/u</small>
       </div>
       <div class="d-flex align-items-center gap-2">
-        <button type="button" class="btn-cantidad" onclick="cambiarCantidad(${indice}, -1)">−</button>
+        <button type="button" class="btn btn-sm btn-outline-primary rounded-circle btn-cantidad" onclick="cambiarCantidad(${indice}, -1)">−</button>
         <span>${producto.cantidad}</span>
-        <button type="button" class="btn-cantidad" onclick="cambiarCantidad(${indice}, 1)">+</button>
+        <button type="button" class="btn btn-sm btn-outline-primary rounded-circle btn-cantidad" onclick="cambiarCantidad(${indice}, 1)">+</button>
       </div>
     </li>`;
 }

@@ -14,22 +14,22 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-pagina="pedido">
+<body class="d-flex flex-column min-vh-100" data-pagina="pedido">
 
   <!-- Aquí plantilla.js pone el menú de arriba -->
-  <div id="cabecera"></div>
+  <div id="cabecera" class="sticky-top"></div>
 
-  <main class="py-5">
+  <main class="flex-grow-1 py-5">
     <div class="container">
       <div class="text-center mb-5">
-        <h1 class="titulo-seccion">Formalizar pedido 🧾</h1>
-        <p class="texto-suave">Revisa lo que llevas y completa tus datos.</p>
+        <h1 class="display-6">Formalizar pedido 🧾</h1>
+        <p class="text-body-secondary">Revisa lo que llevas y completa tus datos.</p>
       </div>
 
       <!-- Si el carrito está vacío (lo decide pedido.js) -->
       <div id="pedidoVacio" class="text-center d-none">
-        <p class="fs-5 texto-suave">Tu pedido está vacío 🥺</p>
-        <a href="menu.html" class="btn btn-rosa">Ir al menú</a>
+        <p class="fs-5 text-body-secondary">Tu pedido está vacío 🥺</p>
+        <a href="menu.html" class="btn btn-primary rounded-pill px-4">Ir al menú</a>
       </div>
 
       <!-- ========== FORMULARIO ========== -->
@@ -37,7 +37,7 @@
 
         <!-- Columna izquierda: datos del cliente -->
         <div class="col-12 col-lg-7">
-          <div class="caja">
+          <div class="bg-white rounded-4 shadow-sm p-4">
             <h4 class="mb-4">Tus datos</h4>
 
             <div class="row g-3 mb-3">
@@ -55,9 +55,9 @@
             <label class="form-label d-block">¿Cómo lo quieres?</label>
             <div class="btn-group w-100 mb-3">
               <input type="radio" class="btn-check" name="entrega" id="recoger" value="Recoger en tienda" checked>
-              <label class="btn btn-borde" for="recoger">🏪 Recoger</label>
+              <label class="btn btn-outline-primary" for="recoger">🏪 Recoger</label>
               <input type="radio" class="btn-check" name="entrega" id="domicilio" value="A domicilio">
-              <label class="btn btn-borde" for="domicilio">🛵 A domicilio</label>
+              <label class="btn btn-outline-primary" for="domicilio">🛵 A domicilio</label>
             </div>
 
             <!-- Solo se muestra si elige "A domicilio" -->
@@ -88,7 +88,7 @@
 
         <!-- Columna derecha: resumen del pedido -->
         <div class="col-12 col-lg-5">
-          <div class="caja">
+          <div class="bg-white rounded-4 shadow-sm p-4">
             <h4 class="mb-3">Tu pedido</h4>
 
             <!-- Aquí pedido.js pinta los productos -->
@@ -99,12 +99,12 @@
             <label for="pedCupon" class="form-label d-block">Código de descuento</label>
             <div class="input-group mb-1">
               <input type="text" class="form-control" id="pedCupon" placeholder="Prueba con DALBIT10">
-              <button type="button" class="btn btn-borde" id="btnCupon">Aplicar</button>
+              <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="btnCupon">Aplicar</button>
             </div>
             <small id="mensajeCupon" class="d-block mb-3"></small>
 
             <!-- Cuentas -->
-            <div class="resumen fondo-crema mb-3">
+            <div class="bg-body rounded-3 p-3 mb-3">
               <div class="d-flex justify-content-between">
                 <span>Subtotal</span><span id="resSubtotal"></span>
               </div>
@@ -116,22 +116,22 @@
               </div>
               <div class="d-flex justify-content-between fw-bold border-top mt-2 pt-2">
                 <span>Total a pagar</span>
-                <span id="totalPedido" class="precio">0,00 €</span>
+                <span id="totalPedido" class="precio fs-4 text-primary">0,00 €</span>
               </div>
             </div>
 
-            <button type="submit" class="btn btn-rosa btn-lg w-100">Confirmar pedido</button>
+            <button type="submit" class="btn btn-primary rounded-pill px-4 btn-lg w-100">Confirmar pedido</button>
           </div>
         </div>
       </form>
 
       <!-- ========== CONFIRMACIÓN (oculta al inicio) ========== -->
-      <div id="pedidoListo" class="caja text-center mx-auto d-none" style="max-width: 560px;">
-        <div class="icono-listo">✅</div>
+      <div id="pedidoListo" class="bg-white rounded-4 shadow-sm p-4 text-center mx-auto d-none" style="max-width: 560px;">
+        <div class="icono-listo display-3">✅</div>
         <h2>¡Pedido recibido!</h2>
-        <p class="texto-suave mb-3">Número de pedido: <strong id="numPedido"></strong></p>
-        <div id="resumenPedido" class="resumen fondo-crema text-start"></div>
-        <a href="index.html" class="btn btn-rosa mt-4">Volver al inicio 💗</a>
+        <p class="text-body-secondary mb-3">Número de pedido: <strong id="numPedido"></strong></p>
+        <div id="resumenPedido" class="bg-body rounded-3 p-3 text-start"></div>
+        <a href="index.html" class="btn btn-primary rounded-pill px-4 mt-4">Volver al inicio 💗</a>
       </div>
     </div>
   </main>

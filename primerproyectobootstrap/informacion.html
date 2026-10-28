@@ -14,26 +14,26 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-pagina="informacion">
+<body class="d-flex flex-column min-vh-100" data-pagina="informacion">
 
   <!-- Aquí plantilla.js pone el menú de arriba -->
-  <div id="cabecera"></div>
+  <div id="cabecera" class="sticky-top"></div>
 
   <!-- ========== HORARIOS Y PREGUNTAS ========== -->
-  <main class="py-5 seccion-clara">
+  <main class="flex-grow-1 py-5 bg-body-tertiary">
     <div class="container">
       <div class="text-center mb-5">
-        <h1 class="titulo-seccion">Información</h1>
-        <p class="texto-suave">Todo lo que necesitas saber antes de venir.</p>
+        <h1 class="display-6">Información</h1>
+        <p class="text-body-secondary">Todo lo que necesitas saber antes de venir.</p>
       </div>
 
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8">
           <div class="accordion" id="acordeonInfo">
 
-            <div class="accordion-item">
+            <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#info1">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#info1">
                   🕒 ¿Cuál es el horario?
                 </button>
               </h2>
@@ -48,9 +48,9 @@
               </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info2">
+                <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info2">
                   📍 ¿Dónde están ubicados?
                 </button>
               </h2>
@@ -61,9 +61,9 @@
               </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info3">
+                <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info3">
                   📶 ¿Tienen wifi y enchufes?
                 </button>
               </h2>
@@ -74,9 +74,9 @@
               </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info4">
+                <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info4">
                   🌱 ¿Tienen opciones veganas?
                 </button>
               </h2>
@@ -87,9 +87,9 @@
               </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item border-0 rounded-4 overflow-hidden shadow-sm mb-3">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info5">
+                <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info5">
                   🛵 ¿Hacen envíos a domicilio?
                 </button>
               </h2>

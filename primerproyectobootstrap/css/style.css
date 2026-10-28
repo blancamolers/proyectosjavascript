@@ -1,195 +1,128 @@
-/* ===== COLORES DE LA CAFETERÍA ===== */
+/* =====================================================
+   ESTILOS DE DALBIT CAFÉ
+   Casi todo el diseño se hace con clases de Bootstrap en el HTML
+   (btn-primary, rounded-4, shadow-sm, p-4, text-body-secondary...).
+   Aquí solo hay:
+     1. Los colores del café puestos en las variables de Bootstrap
+     2. Lo poquito que Bootstrap no trae (fuentes, degradado, animaciones)
+   ===================================================== */
+
+
+/* ===== 1. COLORES DEL CAFÉ → VARIABLES DE BOOTSTRAP ===== */
 :root {
+  /* Nuestra paleta */
+  --rosa: #d9678a;
+  --rosa-oscuro: #c4526f;
+  --rosa-claro: #fde4ea;
   --crema: #fdf8f3;
   --crema-oscuro: #f5ebe0;
-  --rosa: #f4a7b9;
-  --rosa-oscuro: #e58ba1;
-  --rosa-claro: #fde4ea;
   --cafe: #6b4f3f;
   --cafe-suave: #9c8577;
+
+  /* Bootstrap usa estas variables en todas sus clases */
+  --bs-primary: var(--rosa);                 /* text-primary, bg-primary...  */
+  --bs-primary-rgb: 217, 103, 138;
+  --bs-dark-rgb: 107, 79, 63;                /* bg-dark y text-bg-dark = café */
+  --bs-body-bg: var(--crema);                /* fondo de la página           */
+  --bs-body-bg-rgb: 253, 248, 243;
+  --bs-body-color: var(--cafe);              /* color del texto              */
+  --bs-body-color-rgb: 107, 79, 63;
+  --bs-secondary-color: var(--cafe-suave);   /* text-body-secondary          */
+  --bs-tertiary-bg: var(--crema-oscuro);     /* bg-body-tertiary             */
+  --bs-link-color-rgb: 196, 82, 111;         /* color de los enlaces         */
+  --bs-link-hover-color-rgb: 107, 79, 63;
+  --bs-body-font-family: "Gowun Dodum", sans-serif;
 }
 
-/* ===== GENERAL ===== */
-body {
-  background-color: var(--crema);
-  color: var(--cafe);
-  font-family: "Gowun Dodum", sans-serif;
+/* Botón rosa: <button class="btn btn-primary"> */
+.btn-primary {
+  --bs-btn-bg: var(--rosa);
+  --bs-btn-border-color: var(--rosa);
+  --bs-btn-hover-bg: var(--rosa-oscuro);
+  --bs-btn-hover-border-color: var(--rosa-oscuro);
+  --bs-btn-active-bg: var(--rosa-oscuro);
+  --bs-btn-active-border-color: var(--rosa-oscuro);
+  --bs-btn-disabled-bg: var(--rosa);
+  --bs-btn-disabled-border-color: var(--rosa);
+  --bs-btn-focus-shadow-rgb: 217, 103, 138;
 }
 
+/* Botón con borde rosa: <button class="btn btn-outline-primary"> */
+.btn-outline-primary {
+  --bs-btn-color: var(--rosa-oscuro);
+  --bs-btn-border-color: var(--rosa);
+  --bs-btn-hover-bg: var(--rosa);
+  --bs-btn-hover-border-color: var(--rosa);
+  --bs-btn-active-bg: var(--rosa);
+  --bs-btn-active-border-color: var(--rosa);
+  --bs-btn-focus-shadow-rgb: 217, 103, 138;
+}
+
+/* Botón café: <a class="btn btn-dark"> */
+.btn-dark {
+  --bs-btn-bg: var(--cafe);
+  --bs-btn-border-color: var(--cafe);
+  --bs-btn-hover-bg: var(--rosa-oscuro);
+  --bs-btn-hover-border-color: var(--rosa-oscuro);
+}
+
+/* Menú de arriba */
+.navbar-cafe {
+  --bs-navbar-color: var(--cafe);
+  --bs-navbar-hover-color: var(--rosa-oscuro);
+  --bs-navbar-active-color: var(--rosa-oscuro);
+  --bs-navbar-brand-color: var(--cafe);
+  --bs-navbar-brand-hover-color: var(--cafe);
+}
+
+/* Preguntas de Información */
+.accordion {
+  --bs-accordion-active-bg: var(--rosa-claro);
+  --bs-accordion-active-color: var(--cafe);
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+/* Al escribir en un campo (Bootstrap lo trae en azul fijo, sin variable) */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--rosa);
+  box-shadow: 0 0 0 0.25rem var(--rosa-claro);
+}
+
+
+/* ===== 2. LO QUE BOOTSTRAP NO TRAE ===== */
+
+/* Fuente redondita para títulos, logo y precios */
 h1, h2, h3, h4, h5, .logo, .precio {
   font-family: "Jua", sans-serif;
   font-weight: normal;
 }
 
-.texto-suave {
-  color: var(--cafe-suave);
-}
-
-/* Texto pequeño en rosa arriba de los títulos */
-.etiqueta {
-  color: var(--rosa-oscuro);
-  letter-spacing: 2px;
-  margin-bottom: 0.3rem;
-}
-
-.titulo-seccion {
-  font-size: 2.5rem;
-}
-
-/* ===== FONDOS QUE SE REPITEN ===== */
-/* Crema: panel del carrito y ventanas (modales) */
-.panel-carrito,
-.modal-content {
-  background-color: var(--crema);
-}
-
-/* Café con letra crema: pie de página y aviso */
-.pie,
-.aviso {
-  background-color: var(--cafe);
-  color: var(--crema);
-}
-
-/* Cajitas blancas: productos del carrito y resumen del pedido */
-.item-carrito,
-.resumen {
-  background-color: white;
-  border-radius: 16px;
-  padding: 0.7rem 1rem;
-}
-
-/* Cuando la cajita va dentro de algo blanco, la ponemos crema */
-.fondo-crema {
-  background-color: var(--crema);
-}
-
-/* Cajas grandes con sombra: tarjetas del menú y cajas de pedido.html */
-.tarjeta,
-.caja {
-  border: none;
-  border-radius: 24px;
-  box-shadow: 0 6px 18px rgba(107, 79, 63, 0.08);
-}
-
-.caja {
-  display: block;
-  background-color: white;
-  padding: 1.8rem;
-}
-
-/* Para que el pie quede abajo aunque la página tenga poco contenido */
-main {
-  min-height: 65vh;
-}
-
-/* ===== BOTONES ===== */
-/* Lo que comparten los dos estilos de botón */
-.btn-rosa,
-.btn-borde {
-  border-radius: 50px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.btn-rosa {
-  background-color: var(--rosa);
-  color: white;
-}
-
-.btn-rosa:hover {
-  background-color: var(--rosa-oscuro);
-  color: white;
-}
-
-.btn-borde {
-  border: 2px solid var(--rosa);
-  color: var(--rosa-oscuro);
-}
-
-.btn-borde:hover {
-  background-color: var(--rosa-claro);
-  color: var(--rosa-oscuro);
-}
-
-/* Botón elegido: filtro activo y "Recoger / A domicilio" */
-.btn-filtro.activo,
-.btn-check:checked + .btn-borde {
-  background-color: var(--rosa);
-  color: white;
-}
-
-.btn-filtro {
-  margin: 4px;
-}
-
-/* ===== NAVBAR ===== */
-.navbar-cafe {
-  background-color: rgba(253, 248, 243, 0.92);
-  border-bottom: 1px solid var(--crema-oscuro);
-}
-
-.navbar-cafe .logo {
-  font-size: 1.6rem;
-  color: var(--cafe);
-}
-
-.navbar-cafe .nav-link {
-  color: var(--cafe);
-}
-
-/* Enlace de la página en la que estás */
-.navbar-cafe .nav-link:hover,
-.navbar-cafe .nav-link.active {
-  color: var(--rosa-oscuro);
-}
-
+/* Enlace de la página en la que estás, en negrita */
 .navbar-cafe .nav-link.active {
   font-weight: bold;
 }
 
-/* ===== PORTADA ===== */
+/* Portada con degradado rosa → crema */
 .portada {
-  padding: 4rem 0;
   background: linear-gradient(180deg, var(--rosa-claro), var(--crema));
 }
 
-.titulo-portada {
-  font-size: 3.2rem;
-  line-height: 1.2;
-}
-
-/* ===== CARRUSEL ===== */
-.carousel-inner,
-.slide {
-  border-radius: 30px;
-}
-
+/* Diapositivas del carrusel */
 .slide {
   height: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
 }
 
 .slide-img {
   width: 260px;
   max-width: 80%;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-}
-
-.slide p {
-  color: var(--cafe-suave);
 }
 
 .slide-rosa  { background-color: #fbd3dc; }
 .slide-verde { background-color: #d4e8d0; }
 .slide-crema { background-color: #f6e3c6; }
 
-/* Flechas e indicadores en color café */
+/* Flechas e indicadores del carrusel en café */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(35%) sepia(20%) saturate(500%) hue-rotate(340deg);
@@ -199,75 +132,26 @@ main {
   background-color: var(--cafe);
 }
 
-/* ===== BUSCADOR ===== */
-.buscador {
-  border-radius: 50px;
-  padding: 0.7rem 1.3rem;
-  border: 2px solid var(--crema-oscuro);
+/* Botones redondos + y − del carrito */
+.btn-cantidad {
+  width: 30px;
+  height: 30px;
+  padding: 0;
 }
 
-/* ===== MENÚ ===== */
-.grupo {
-  margin-bottom: 3rem;
-}
 
-.categoria {
-  margin-bottom: 1.5rem;
-}
-
-.tarjeta {
-  overflow: hidden;
-}
+/* ===== ANIMACIONES ===== */
 
 /* Tarjetas y accesos se levantan al pasar el mouse */
-.tarjeta,
-.acceso {
+.levantar {
   transition: transform 0.2s;
 }
 
-.tarjeta:hover,
-.acceso:hover {
+.levantar:hover {
   transform: translateY(-6px);
 }
 
-/* Accesos rápidos de la portada (son enlaces) */
-.acceso {
-  height: 100%;
-  color: var(--cafe);
-  text-decoration: none;
-}
-
-.acceso:hover {
-  color: var(--cafe);
-}
-
-.icono-grande {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.tarjeta .card-footer {
-  background: none;
-  border: none;
-  padding-top: 0;
-}
-
-.precio {
-  font-size: 1.3rem;
-  color: var(--rosa-oscuro);
-}
-
-/* Etiqueta "Popular" / "Nuevo" */
-.insignia {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background-color: var(--cafe);
-  border-radius: 50px;
-}
-
-/* ===== ANIMACIÓN AL HACER SCROLL ===== */
-/* Las tarjetas empiezan invisibles y un poco abajo... */
+/* Al hacer scroll: empiezan invisibles y un poco abajo... */
 .aparecer {
   opacity: 0;
   transform: translateY(40px);
@@ -280,79 +164,6 @@ main {
   transform: translateY(0);
 }
 
-/* ===== INFORMACIÓN (ACORDEÓN) ===== */
-.seccion-clara {
-  background-color: var(--crema-oscuro);
-}
-
-.accordion-item {
-  border: none;
-  border-radius: 16px !important;
-  margin-bottom: 0.8rem;
-  overflow: hidden;
-}
-
-.accordion-button {
-  color: var(--cafe);
-  font-weight: bold;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: var(--rosa-claro);
-  color: var(--cafe);
-}
-
-.accordion-button:focus,
-.accordion-button:not(.collapsed) {
-  box-shadow: none;
-}
-
-/* ===== FORMULARIOS Y MODALES ===== */
-.modal-content {
-  border: none;
-  border-radius: 24px;
-}
-
-.form-control:focus,
-.form-select:focus {
-  border-color: var(--rosa);
-  box-shadow: 0 0 0 0.2rem var(--rosa-claro);
-}
-
-/* ===== CARRITO Y PEDIDO ===== */
-.contador {
-  background-color: var(--cafe);
-}
-
-.item-carrito {
-  margin-bottom: 0.6rem;
-}
-
-.btn-cantidad {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-radius: 50%;
-  background-color: var(--rosa-claro);
-  color: var(--cafe);
-  border: none;
-}
-
-.btn-cantidad:hover {
-  background-color: var(--rosa);
-  color: white;
-}
-
-.aviso {
-  border-radius: 16px;
-}
-
-.barra-envio {
-  background-color: var(--rosa);
-  transition: width 0.4s;
-}
-
-/* ===== ANIMACIONES DE "SALTITO" ===== */
 /* El contador del carrito salta al agregar algo */
 .contador.saltar {
   animation: saltar 0.4s;
@@ -364,7 +175,6 @@ main {
 
 /* El ✅ crece al confirmar el pedido */
 .icono-listo {
-  font-size: 4rem;
   animation: crecer 0.6s;
 }
 
@@ -374,57 +184,23 @@ main {
   100% { transform: scale(1); }
 }
 
-/* ===== BOTONES FLOTANTES ===== */
-/* Lo que comparten el carrito flotante y el botón "volver arriba" */
-.carrito-flotante,
+/* Botón "volver arriba": escondido hasta que JavaScript le pone "mostrar" */
 .btn-arriba {
-  position: fixed;
-  bottom: 20px;
-  z-index: 1000;
-}
-
-.carrito-flotante {
-  right: 20px;
-  font-size: 1.2rem;
-  padding: 0.7rem 1.2rem;
-  box-shadow: 0 6px 18px rgba(107, 79, 63, 0.25);
-}
-
-.btn-arriba {
-  left: 20px;
   width: 46px;
   height: 46px;
-  border-radius: 50%;
-  background-color: var(--cafe);
-  color: white;
-  font-size: 1.3rem;
-  opacity: 0;            /* escondido al inicio */
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
 }
 
-.btn-arriba:hover {
-  background-color: var(--rosa-oscuro);
-  color: white;
-}
-
-/* JavaScript le pone "mostrar" cuando bajas en la página */
 .btn-arriba.mostrar {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* ===== PIE DE PÁGINA ===== */
-.pie .logo {
-  font-size: 1.4rem;
-}
 
 /* ===== CELULAR ===== */
 @media (max-width: 576px) {
-  .titulo-portada {
-    font-size: 2.3rem;
-  }
-
   .slide {
     height: 340px;
   }

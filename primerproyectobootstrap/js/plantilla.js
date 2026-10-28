@@ -9,7 +9,7 @@
 //
 // y este archivo los rellena. Si cambias algo aquí, cambia en todas las páginas.
 
-// ¿En qué página estamos? Lo dice el <body data-pagina="...">
+// ¿En qué página estamos? Lo dice el <body class="d-flex flex-column min-vh-100" data-pagina="...">
 const paginaActual = document.body.dataset.pagina;
 
 // Crea un enlace del menú y lo marca si es la página actual
@@ -21,10 +21,10 @@ function enlace(pagina, archivo, texto) {
 
 // ---------- MENÚ DE NAVEGACIÓN ----------
 document.getElementById("cabecera").innerHTML = `
-  <nav class="navbar navbar-expand-lg sticky-top navbar-cafe">
+  <nav class="navbar navbar-expand-lg bg-body border-bottom navbar-cafe">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <span class="logo">Dalbit Café</span>
+        <span class="logo fs-3">Dalbit Café</span>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
@@ -37,15 +37,15 @@ document.getElementById("cabecera").innerHTML = `
           ${enlace("menu", "menu.html", "Menú")}
           ${enlace("informacion", "informacion.html", "Información")}
           <li class="nav-item">
-            <button class="btn btn-rosa ms-lg-2" data-bs-toggle="modal" data-bs-target="#modalReserva">
+            <button class="btn btn-primary rounded-pill px-4 ms-lg-2" data-bs-toggle="modal" data-bs-target="#modalReserva">
               Reservar mesa
             </button>
           </li>
           <li class="nav-item">
             <!-- Botón del carrito: abre el panel lateral -->
-            <button class="btn btn-borde position-relative ms-lg-1 mt-2 mt-lg-0" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
+            <button class="btn btn-outline-primary rounded-pill px-4 position-relative ms-lg-1 mt-2 mt-lg-0" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
               🛒 Mi pedido
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill contador numero-carrito">0</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-dark contador numero-carrito">0</span>
             </button>
           </li>
         </ul>
@@ -57,15 +57,15 @@ document.getElementById("cabecera").innerHTML = `
 // ---------- PIE, RESERVA, CARRITO Y AVISOS ----------
 document.getElementById("piezasComunes").innerHTML = `
   <!-- Pie de página -->
-  <footer class="pie text-center py-4">
-    <p class="logo mb-1">Dalbit Café</p>
+  <footer class="bg-dark text-light text-center py-4">
+    <p class="logo fs-4 mb-1">Dalbit Café</p>
     <p class="mb-0 small">Calle de las Flores 24 · 2026</p>
   </footer>
 
   <!-- Ventana: reservar mesa -->
   <div class="modal fade" id="modalReserva" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content border-0 rounded-4">
         <div class="modal-header">
           <h5 class="modal-title">Reservar mesa 🌸</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -105,8 +105,8 @@ document.getElementById("piezasComunes").innerHTML = `
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-borde" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-rosa">Confirmar</button>
+            <button type="button" class="btn btn-outline-primary rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary rounded-pill px-4">Confirmar</button>
           </div>
         </form>
       </div>
@@ -114,10 +114,10 @@ document.getElementById("piezasComunes").innerHTML = `
   </div>
 
   <!-- Panel lateral: carrito -->
-  <div class="offcanvas offcanvas-end panel-carrito" tabindex="-1" id="panelCarrito">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="panelCarrito">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">🛒 Mi pedido</h5>
-      <button id="btnVaciar" class="btn btn-sm btn-borde ms-auto me-2">🗑️ Vaciar</button>
+      <button id="btnVaciar" class="btn btn-sm btn-outline-primary rounded-pill ms-auto me-2">🗑️ Vaciar</button>
       <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas"></button>
     </div>
 
@@ -126,37 +126,37 @@ document.getElementById("piezasComunes").innerHTML = `
       <ul id="listaCarrito" class="list-unstyled flex-grow-1"></ul>
 
       <!-- Mensaje cuando no hay nada -->
-      <p id="carritoVacio" class="text-center texto-suave my-auto">
+      <p id="carritoVacio" class="text-center text-body-secondary my-auto">
         Tu pedido está vacío 🥺<br>Agrega algo rico del <a href="menu.html">menú</a>.
       </p>
 
       <div class="border-top pt-3">
         <!-- Barra: cuánto falta para el envío gratis -->
-        <small id="textoEnvio" class="d-block texto-suave mb-1"></small>
+        <small id="textoEnvio" class="d-block text-body-secondary mb-1"></small>
         <div class="progress mb-3" style="height: 8px;">
-          <div id="barraEnvio" class="progress-bar barra-envio" style="width: 0%;"></div>
+          <div id="barraEnvio" class="progress-bar bg-primary" style="width: 0%;"></div>
         </div>
 
         <div class="d-flex justify-content-between mb-3">
           <span class="fs-5">Subtotal</span>
-          <span id="total" class="precio">0,00 €</span>
+          <span id="total" class="precio fs-4 text-primary">0,00 €</span>
         </div>
-        <a id="btnFormalizar" href="pedido.html" class="btn btn-rosa w-100">Formalizar pedido</a>
+        <a id="btnFormalizar" href="pedido.html" class="btn btn-primary rounded-pill px-4 w-100">Formalizar pedido</a>
       </div>
     </div>
   </div>
 
   <!-- Carrito flotante (solo en celular, donde el menú de arriba está escondido) -->
-  <button class="btn btn-rosa carrito-flotante d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
+  <button class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-3 px-4 fs-5 shadow z-3 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
     🛒 <span class="numero-carrito">0</span>
   </button>
 
   <!-- Botón para volver arriba -->
-  <a href="#" id="btnArriba" class="btn btn-arriba">↑</a>
+  <a href="#" id="btnArriba" class="btn btn-dark rounded-circle position-fixed bottom-0 start-0 m-3 shadow z-3 btn-arriba">↑</a>
 
   <!-- Aviso pequeño (Toast de Bootstrap) -->
   <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
-    <div id="aviso" class="toast aviso" role="alert">
+    <div id="aviso" class="toast text-bg-dark border-0 rounded-4" role="alert">
       <div class="toast-body" id="textoAviso">Agregado</div>
     </div>
   </div>`;

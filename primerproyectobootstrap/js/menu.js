@@ -27,20 +27,20 @@ const productos = [
 // Creamos una tarjeta por cada producto, dentro de su categoría
 productos.forEach(function (producto, indice) {
   const fila = document.querySelector('.grupo[data-categoria="' + producto.categoria + '"] .row');
-  const insignia = producto.insignia ? `<span class="badge insignia">${producto.insignia}</span>` : "";
+  const insignia = producto.insignia ? `<span class="badge rounded-pill text-bg-dark position-absolute top-0 end-0 m-2">${producto.insignia}</span>` : "";
 
   fila.innerHTML += `
     <div class="col aparecer">
-      <div class="card tarjeta h-100">
+      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden levantar">
         ${insignia}
         <img src="img/${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
-          <p class="card-text texto-suave">${producto.descripcion}</p>
+          <p class="card-text text-body-secondary">${producto.descripcion}</p>
         </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <span class="precio">${formatoPrecio(producto.precio)}</span>
-          <button class="btn btn-rosa btn-sm" onclick="agregar(this, ${indice})">+ Agregar</button>
+        <div class="card-footer bg-transparent border-0 pt-0 pb-3 d-flex justify-content-between align-items-center">
+          <span class="precio fs-5 text-primary">${formatoPrecio(producto.precio)}</span>
+          <button class="btn btn-primary btn-sm rounded-pill px-3" onclick="agregar(this, ${indice})">+ Agregar</button>
         </div>
       </div>
     </div>`;
@@ -102,8 +102,8 @@ buscador.addEventListener("input", aplicarFiltros);
 
 document.querySelectorAll(".btn-filtro").forEach(function (boton) {
   boton.addEventListener("click", function () {
-    document.querySelector(".btn-filtro.activo").classList.remove("activo");
-    boton.classList.add("activo");
+    document.querySelector(".btn-filtro.active").classList.remove("active");
+    boton.classList.add("active");
     filtroActual = boton.dataset.filtro;
     aplicarFiltros();
   });
